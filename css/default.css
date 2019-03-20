@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Margarine');
+
+body {
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	height: 86px;
+	background-color: #44f;
+	color: #fff;
+	border-bottom: 2px solid #00f;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 100%;
+}
+
+.logo span {
+	margin-left: 10px;
+	font-family: 'Margarine', cursive;
+	font-size: 30px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+}
+
+nav a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	text-decoration: none;
+	font-size: 26px;
+	color: #fff;
+	width: 100px;
+	height: 100%;
+}
+
+header:hover {
+	background-color: #fff;
+	transition-duration: 0.4s;
+	color: #44f;
+}
+
+header:hover a {
+	color: #44f;
+	transition-duration: 0.4s;
+}
+
+nav a:hover {
+	color: #59f;
+}
+
+.slider {
+	width: 100%;
+	height: calc(100vh - 88px);
+	background-image: url(../img/slide1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+main {
+	margin: 40px 0 0 0;
+}
