@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/flexDirection.css">
+	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
+	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#">Главная</a>
+			<a href="#"><div class="logo">
+				<img src="img/logo1.png">
+				<span>Flexbox</span>
+			</div></a>
+			<a href="#">Уроки</a>
+		</nav>
+	</header>
+	<section class="slider">
+		
+	</section>
+	<main>
+		<div class="default flexContainer">
+			<h2>flex-direction</h2>
+			<p>Устанавливает main axis (основную ось), таким образом определяет направление flex-элементов расположенных в контейнере. Думайте о flex-элементах, прежде всего как горизонтальных строках или вертикальных колонках.</p>
+		</div>
+		<article class="default flexContainer">
+			<h3>flex-direction: row;</h3>
+			<p>Установлен по умолчанию. Flex-элементы располагаются <i>слева направо</i> по горизонтали (в строку).</p>
+			<div class="flex">
+				<div class="code">
+					<p>.flexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: row;</p>
+					<p>}</p>
+				</div>
+				<div class="flexBlock">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement">4</div>
+					<div class="flexElement">5</div>
+				</div>
+			</div>
+		</article>
+		<article class="default flexContainer">
+			<h3>flex-direction: row-reverse;</h3>
+			<p>Flex-элементы располагаются <i>справа налево</i> по горизонтали (в колонку).</p>
+			<div class="flex">
+				<div class="code">
+					<p>.flexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: row-reverse;</p>
+					<p>}</p>
+				</div>
+				<div class="flexBlock rowReverse">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement">4</div>
+					<div class="flexElement">5</div>
+				</div>
+			</div>
+		</article>
+		<article class="default flexContainer">
+			<h3>flex-direction: column;</h3>
+			<p>Flex-элементы располагаются <i>сверху вниз</i> по вертикали (в строку).</p>
+			<div class="flex">
+				<div class="code">
+					<p>.flexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: column;</p>
+					<p>}</p>
+				</div>
+				<div class="flexBlock column">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement">4</div>
+					<div class="flexElement">5</div>
+				</div>
+			</div>
+		</article>
+		<article class="default flexContainer">
+			<h3>flex-direction: column-reverse;</h3>
+			<p>Flex-элементы располагаются <i>снизу вверх</i> по вертикали (в строку).</p>
+			<div class="flex">
+				<div class="code">
+					<p>.flexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: column-reverse;</p>
+					<p>}</p>
+				</div>
+				<div class="flexBlock columnReverse">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement">4</div>
+					<div class="flexElement">5</div>
+				</div>
+			</div>
+		</article>
+		<section class="default flexContainer">
+			<div class="test">
+				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
+				<p>Первое задание</p>
+				<p>В этом задании нужно поставить блок 2 в <i>левый нижний угол</i>. Справитесь?</p>
+			</div>
+			<article class="flex">
+				<div class="code">
+					<p>.FlexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: <input id="firstFlexAttribute" class="gameInput" type="text">;</p>
+					<p>}</p>
+				</div>
+				<div class="flexGame" id="firstFlexContainer">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+				</div>
+			</article>
+			<div class="test">
+				<p>Второе задание</p>
+				<p>В этом задании нужно <i>поменять блоки местами</i>. Справитесь?</p>
+			</div>
+			<article class="flex">
+				<div class="code">
+					<p>.FlexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: <input id="secondFlexAttribute" class="gameInput" type="text">;</p>
+					<p>}</p>
+				</div>
+				<div class="flexGame" id="secondFlexContainer">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+				</div>
+			</article>
+			<div class="test">
+				<p>Третье задание</p>
+				<p>В этом задании нужно <i>сместить блок 1 в левый нижний угол</i>. Справитесь?</p>
+			</div>
+			<article class="flex">
+				<div class="code">
+					<p>.FlexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: <input id="thirdFlexAttribute" class="gameInput" type="text">;</p>
+					<p>}</p>
+				</div>
+				<div class="flexGame" id="thirdFlexContainer">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+				</div>
+			</article>
+			<div class="test">
+				<p>Четвёртое задание</p>
+				<p>В этом задании нужно <i>сместить блок 2 в правый верхний угол</i>. Справитесь?</p>
+			</div>
+			<article class="flex">
+				<div class="code">
+					<p>.FlexContainer {</p>
+					<p>display: flex;</p>
+					<p>flex-direction: <input id="fourthFlexAttribute" class="gameInput" type="text">;</p>
+					<p>}</p>
+				</div>
+				<div class="flexGame flexDirectionColumnReverse" id="fourthFlexContainer">
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+				</div>
+			</article>
+			<p id="result">Ваш результат: 0 из 4.</p>
+		</section>
+		<div class="links">
+			<a href="properties.html">
+				<div class="def back">
+					<span>Назад</span>
+					<h3>Свойство display для Flex-контейнера</h3>
+				</div>
+			</a>
+			<a href="flexDirection.html">
+				<div class="def next">
+					<span>Далее</span>
+					<h3>Ведётся разработка</h3>
+				</div>
+			</a>
+		</div>
+	</main>
+	<footer>
+		<div class="footerFlex">
+			<span>@2019 Flexbox</span>
+			<span>Дизайн от <i>Edjll</i></span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="script/script.js"></script>
+	<script type="text/javascript" src="script/gameScript.js"></script>	
+</body>
+</html>

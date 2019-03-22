@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/display.css">
+	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#">Главная</a>
+			<a href="#"><div class="logo">
+				<img src="img/logo1.png">
+				<span>Flexbox</span>
+			</div></a>
+			<a href="#">Уроки</a>
+		</nav>
+	</header>
+	<section class="slider">
+		
+	</section>
+	<main>
+		<article class="default flexContainer">
+			<h2>display</h2>
+			<p>display применятся к родительскому элементу (<i>Flex-контейнер</i>). От переданного значения зависит каким будет flex-контейнер (блочным или строчным).</p>
+			<p>Flex-контейнер не является блочным контейнером, поэтому для дочерних элементов не работают такие CSS-свойства, как <i>float</i>, <i>clear</i>, <i>vertical-align</i>.</p>
+			<div class="code">
+				<p>.flexContainer {</p>
+				<p>display: flex;<span>// блочный уровень</span></p>
+				<p>}</p>
+			</div>
+			<div class="code">
+				<p>.flexContainer {</p>
+				<p>display: inline-flex;<span>// строковый уровень</span></p>
+				<p>}</p>
+			</div>
+		</article>
+		<div class="links">
+			<a href="properties.html">
+				<div class="def back">
+					<span>Назад</span>
+					<h3>Свойства Flexbox</h3>
+				</div>
+			</a>
+			<a href="flexDirection.html">
+				<div class="def next">
+					<span>Далее</span>
+					<h3>Свойство flex-direction для Flex-контейнера</h3>
+				</div>
+			</a>
+		</div>
+	</main>
+	<footer>
+		<div class="footerFlex">
+			<span>@2019 Flexbox</span>
+			<span>Дизайн от <i>Edjll</i></span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="script/script.js"></script>	
+</body>
+</html>
