@@ -1,5 +1,5 @@
-.test:not(:first-of-type) {
-	margin-top: 30px;
+.test p:nth-of-type(1) {
+	font-style: italic;
 }
 
 .game {
@@ -25,27 +25,11 @@
     background-color: #aaf;
     padding-left: 2px;
     box-sizing: border-box;
+    outline: none;
 }
 
 .input p:not(:last-of-type):not(:first-of-type) {
 	margin-left: 30px;
-}
-
-.flexGame {
-	display: flex;
-	justify-content: space-between;
-	max-width: 600px;
-	min-width: 340px;
-	height: 100%;
-	background-color: #88f;
-	border: 4px dashed #fff;
-	box-sizing: border-box;
-}
-
-.flexElement {
-	width: 40px;
-	height: 40px;
-	background-color: red;
 }
 
 .flexDirectionRow {
@@ -60,6 +44,17 @@
 .flexDirectionColumnReverse {
 	flex-direction: column-reverse;
 }
+
+.flexWrapNowrap {
+	flex-wrap: nowrap;
+}
+.flexWrapWrap {
+	flex-wrap: wrap;
+}
+.flexWrapWrapReverse {
+	flex-wrap: wrap-reverse;
+}
+
 
 .trueAnswer {
 	background-color: green;
