@@ -11,12 +11,12 @@
 <body>
 	<header>
 		<nav>
-			<a href="#">Главная</a>
-			<a href="#"><div class="logo">
+			<a href="index.html">Главная</a>
+			<a href="index.html"><div class="logo">
 				<img src="img/logo1.png">
 				<span>Flexbox</span>
 			</div></a>
-			<a href="#">Уроки</a>
+			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
 	<section class="slider">
@@ -24,7 +24,7 @@
 	</section>
 	<main>
 		<div class="default flexContainer">
-			<h2>flex-direction</h2>
+			<h1>flex-direction</h1>
 			<p>Устанавливает main axis (основную ось), таким образом определяет направление flex-элементов расположенных в контейнере. Думайте о flex-элементах, прежде всего как горизонтальных строках или вертикальных колонках.</p>
 		</div>
 		<article class="default flexContainer">
@@ -48,7 +48,7 @@
 		</article>
 		<article class="default flexContainer">
 			<h3>flex-direction: row-reverse;</h3>
-			<p>Flex-элементы располагаются <i>справа налево</i> по горизонтали (в колонку).</p>
+			<p>Flex-элементы располагаются <i>справа налево</i> по горизонтали (в строку).</p>
 			<div class="flex">
 				<div class="code">
 					<p>.flexContainer {</p>
@@ -56,7 +56,7 @@
 					<p>flex-direction: row-reverse;</p>
 					<p>}</p>
 				</div>
-				<div class="flexBlock rowReverse">
+				<div class="flexBlock flexDirectionRowReverse">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 					<div class="flexElement">3</div>
@@ -67,7 +67,7 @@
 		</article>
 		<article class="default flexContainer">
 			<h3>flex-direction: column;</h3>
-			<p>Flex-элементы располагаются <i>сверху вниз</i> по вертикали (в строку).</p>
+			<p>Flex-элементы располагаются <i>сверху вниз</i> по вертикали (в колонку).</p>
 			<div class="flex">
 				<div class="code">
 					<p>.flexContainer {</p>
@@ -75,7 +75,7 @@
 					<p>flex-direction: column;</p>
 					<p>}</p>
 				</div>
-				<div class="flexBlock column">
+				<div class="flexBlock flexDirectionColumn">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 					<div class="flexElement">3</div>
@@ -86,7 +86,7 @@
 		</article>
 		<article class="default flexContainer">
 			<h3>flex-direction: column-reverse;</h3>
-			<p>Flex-элементы располагаются <i>снизу вверх</i> по вертикали (в строку).</p>
+			<p>Flex-элементы располагаются <i>снизу вверх</i> по вертикали (в колонку).</p>
 			<div class="flex">
 				<div class="code">
 					<p>.flexContainer {</p>
@@ -94,7 +94,7 @@
 					<p>flex-direction: column-reverse;</p>
 					<p>}</p>
 				</div>
-				<div class="flexBlock columnReverse">
+				<div class="flexBlock flexDirectionColumnReverse">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 					<div class="flexElement">3</div>
@@ -116,7 +116,7 @@
 					<p>flex-direction: <input id="firstFlexAttribute" class="gameInput" type="text">;</p>
 					<p>}</p>
 				</div>
-				<div class="flexGame" id="firstFlexContainer">
+				<div class="flexBlock" id="firstFlexContainer">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 				</div>
@@ -132,7 +132,7 @@
 					<p>flex-direction: <input id="secondFlexAttribute" class="gameInput" type="text">;</p>
 					<p>}</p>
 				</div>
-				<div class="flexGame" id="secondFlexContainer">
+				<div class="flexBlock" id="secondFlexContainer">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 				</div>
@@ -148,7 +148,7 @@
 					<p>flex-direction: <input id="thirdFlexAttribute" class="gameInput" type="text">;</p>
 					<p>}</p>
 				</div>
-				<div class="flexGame" id="thirdFlexContainer">
+				<div class="flexBlock" id="thirdFlexContainer">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 				</div>
@@ -164,7 +164,7 @@
 					<p>flex-direction: <input id="fourthFlexAttribute" class="gameInput" type="text">;</p>
 					<p>}</p>
 				</div>
-				<div class="flexGame flexDirectionColumnReverse" id="fourthFlexContainer">
+				<div class="flexBlock flexDirectionColumnReverse" id="fourthFlexContainer">
 					<div class="flexElement">1</div>
 					<div class="flexElement">2</div>
 				</div>
@@ -178,10 +178,10 @@
 					<h3>Свойство display для Flex-контейнера</h3>
 				</div>
 			</a>
-			<a href="#">
+			<a href="flexWrap.html">
 				<div class="def next">
 					<span>Далее</span>
-					<h3>Ведётся разработка</h3>
+					<h3>Свойство flex-wrap для Flex-контейнера</h3>
 				</div>
 			</a>
 		</div>
@@ -192,7 +192,7 @@
 			<span>Дизайн от <i>Edjll</i></span>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/gameScript.js"></script>	
+	<script type="text/javascript" src="js/gameScript.js"></script>
+	<script type="text/javascript" src="js/flexDirection.js"></script>		
 </body>
 </html>
