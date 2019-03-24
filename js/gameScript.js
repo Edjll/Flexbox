@@ -6,12 +6,12 @@ var defaulInputClass = document.getElementById('firstFlexAttribute').className;
 var defaultFlexElements = 'flexElement';
 
 var namesContainers = ['firstFlexContainer', 'secondFlexContainer', 'thirdFlexContainer', 'fourthFlexContainer', 'fivethFlexContainer', 'sixthFlexContainer', 'seventhFlexContainer'];
-var namesFlexDirection = ['Row', 'Column', 'RowReverse', 'ColumnReverse'];
-var namesFlexWrap = ['Wrap', 'Nowrap', 'WrapReverse'];
-var namesFlexFlow = ['ColumnWrap', 'RowWrapReverse', 'RowReverseNowrap', 'ColumnWrapReverse', 'ColumnNowrap', 'RowWrap', 'RowNowrap', 'RowReverseWrap', 'RowReverseWrapReverse', 'ColumnReverseWrap', 'ColumnReverseWrapReverse', 'ColumnReverseNowrap'];
-var namesFlexJustifyContent = ['SpaceBetween', 'FlexEnd', 'Center', 'FlexStart', 'SpaceEvenly', 'SpaceAround'];
-var namesFlexAlignItems = ['Center', 'FlexStart', 'FlexEnd', 'Baseline', 'Stretch'];
-var namesFlexAlignContent = ['FlexEnd', 'FlexStart', 'SpaceAround', 'Center', 'Stretch', 'SpaceBetween', 'SpaceEvenly'];
+var namesFlexDirection = ['Row', 'Column', 'Row-Reverse', 'Column-Reverse'];
+var namesFlexWrap = ['Wrap', 'Nowrap', 'Wrap-Reverse'];
+var namesFlexFlow = ['Column Wrap', 'Row Wrap-Reverse', 'Row-Reverse Nowrap', 'Column Wrap-Reverse', 'Column Nowrap', 'Row Wrap', 'Row Nowrap', 'Row-Reverse Wrap', 'Row-Reverse Wrap-Reverse', 'Column-Reverse Wrap', 'Column-Reverse Wrap-Reverse', 'Column-Reverse Nowrap'];
+var namesFlexJustifyContent = ['Space-Between', 'Flex-End', 'Center', 'Flex-Start', 'Space-Evenly', 'Space-Around'];
+var namesFlexAlignItems = ['Center', 'Flex-Start', 'Flex-End', 'Baseline', 'Stretch'];
+var namesFlexAlignContent = ['Flex-End', 'Flex-Start', 'Space-Around', 'Center', 'Stretch', 'Space-Between', 'Space-Evenly'];
 
 
 function scanContainer(amountQuestion) {
@@ -40,8 +40,8 @@ function colorElements(elements, color) {
 }
 
 function newName(name) {
-	if (name[name.length-1] != ' ') name = name.replace(' ', '');
-	if (name[name.length-1] != '-') name = name.replace(/-/g, '');
+ 	name = name.replace(' ', '');
+ 	name = name.replace(/-/g, '');
 	return name;
 }
 
@@ -56,9 +56,9 @@ function game(id, type, idBlock, name, number, amountQuestion, names, defaulFlex
 		classElement.className = flexContainer[number];
 		colorElements(elementsColor, ' flexElementFalse');
 		for (var i = 0; i < names.length; i++) { 
-			var inputNewName = newName(inputElement.value);
-			if (inputNewName === names[i].toLowerCase()) {
-				classElement.className = defaulFlexGame + type + names[i];
+			var newNames = newName(names[i]);
+			if (inputElement.value === names[i].toLowerCase()) {
+				classElement.className = defaulFlexGame + type + newNames;
 				inputElement.className = defaulInputClass + ' falseAnswer';
 			}
 		}
