@@ -8,6 +8,7 @@
 .terms {
 	list-style-type: circle;
 	margin: 20px 0;
+	padding-inline-start: 20px;
 }
 
 .terms li:not(:last-of-type) {
