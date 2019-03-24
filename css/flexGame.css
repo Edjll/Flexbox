@@ -19,13 +19,14 @@
 }
 
 .gameInput {
-	width: 133px;
+	width: 135px;
 	font-size: 18px;
 	border: 1px solid #33f;
     background-color: #aaf;
     padding-left: 2px;
     box-sizing: border-box;
     outline: none;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .input p:not(:last-of-type):not(:first-of-type) {
@@ -55,6 +56,111 @@
 	flex-wrap: wrap-reverse;
 }
 
+
+.flexFlowColumnWrapReverse {
+	flex-flow: column wrap-reverse;
+}
+.flexFlowColumnWrap {
+	flex-flow: column wrap;
+}
+.flexFlowColumnNowrap {
+	flex-flow: column nowrap;
+}
+
+.flexFlowRowWrapReverse {
+	flex-flow: row wrap-reverse;
+}
+.flexFlowRowWrap {
+	flex-flow: row wrap;
+}
+.flexFlowRowNowrap {
+	flex-flow: row nowrap;
+}
+
+.flexFlowRowReverseNowrap {
+	flex-flow: row-reverse nowrap;
+}
+.flexFlowRowReverseWrap {
+	flex-flow: row-reverse wrap;
+}
+.flexFlowRowReverseWrapReverse {
+	flex-flow: row-reverse wrap-reverse;
+}
+
+.flexFlowColumnReverseWrap {
+	flex-flow: column-reverse wrap;
+}
+.flexFlowColumnReverseWrapReverse {
+	flex-flow: column-reverse wrap-reverse;
+}
+.flexFlowColumnReverseNowrap {
+	flex-flow: column-reverse nowrap;
+}
+
+.flexJustifyContentFlexStart {
+	justify-content: flex-start;
+}
+.flexJustifyContentFlexEnd {
+	justify-content: flex-end;
+}
+.flexJustifyContentCenter {
+	justify-content: center;
+}
+.flexJustifyContentSpaceBetween {
+	justify-content: space-between;
+}
+.flexJustifyContentSpaceAround {
+	justify-content: space-around;
+}
+.flexJustifyContentSpaceEvenly {
+	justify-content: space-evenly;
+}
+
+.flexAlignItemsStretch {
+	align-items: stretch;
+}
+.flexAlignItemsFlexStart {
+	align-items: flex-start;
+}
+.flexAlignItemsFlexEnd {
+	align-items: flex-end;
+}
+.flexAlignItemsCenter {
+	align-items: center;
+}
+.flexAlignItemsBaseline {
+	align-items: baseline;
+}
+
+.flexAlignItemsStretch .flexElement {
+	height: auto;
+}
+
+.flexAlignContentFlexStart {
+	align-content: flex-start;
+}
+.flexAlignContentFlexEnd {
+	align-content: flex-end;
+}
+.flexAlignContentCenter {
+	align-content: center;
+}
+.flexAlignContentSpaceAround {
+	align-content: space-around;
+}
+.flexAlignContentSpaceBetween {
+	align-content: space-between;
+}
+.flexAlignContentStretch {
+	align-content: stretch;
+}
+.flexAlignContentSpaceEvenly {
+	align-content: space-evenly;
+}
+
+.flexAlignContentStretch .flexElement {
+	height: auto;
+}
 
 .trueAnswer {
 	background-color: green;

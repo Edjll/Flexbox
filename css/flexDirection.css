@@ -1,12 +1,13 @@
 .flexBlock {
 	justify-content: space-between;
+	height: 195px;
+}
+
+.code {
+	height: 195px;
 }
 
 
 h3 {
 	margin-bottom: 40px;
-}
-
-.links a {
-	width: 50%;
 }
