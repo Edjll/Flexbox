@@ -40,8 +40,8 @@ function colorElements(elements, color) {
 }
 
 function newName(name) {
-	name = name.replace(' ', '');
-	name = name.replace('-', '');
+	if (name[name.length-1] != ' ') name = name.replace(' ', '');
+	if (name[name.length-1] != '-') name = name.replace(/-/g, '');
 	return name;
 }
 
