@@ -1,9 +1,24 @@
+@media (min-width: 380px) {
+	.code {
+		height: 265px;
+	}
 
-.code {
-	height: 265px;
+	.flexBlock {
+		height: 265px;
+	}
 }
 
+@media (max-width: 381px) {
+	.code {
+		height: 294px;
+	}
+
+	.flexBlock {
+		height: 294px;
+	}
+}
+
+
 .flexBlock {
-	height: 265px;
 	flex-wrap: wrap;
 }

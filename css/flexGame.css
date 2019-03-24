@@ -1,3 +1,15 @@
+@media (min-width: 381px) {
+	.gameInput {
+		width: 135px;
+	}
+}
+
+@media (max-width: 380px) {
+	.gameInput {
+		width: 90%;
+	}
+}
+
 .test p:nth-of-type(1) {
 	font-style: italic;
 }
@@ -19,7 +31,6 @@
 }
 
 .gameInput {
-	width: 135px;
 	font-size: 18px;
 	border: 1px solid #33f;
     background-color: #aaf;
