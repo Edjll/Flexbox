@@ -173,6 +173,27 @@
 	height: auto;
 }
 
+.flexFlexGrow0 {
+	flex-grow: 0;
+}
+.flexFlexGrow1 {
+	flex-grow: 1;
+}
+.flexFlexGrow2 {
+	flex-grow: 2;
+}
+.flexFlexGrow3 {
+	flex-grow: 3;
+}
+.flexFlexGrow4 {
+	flex-grow: 4;
+}
+.flexFlexGrow5 {
+	flex-grow: 5;
+}
+
+
+
 .trueAnswer {
 	background-color: green;
 }
