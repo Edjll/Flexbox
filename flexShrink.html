@@ -6,10 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	<title>Flex-grow</title>
+	<title>Flex-shrink</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
-	<link rel="stylesheet" type="text/css" href="css/flexGrow.css">
+	<link rel="stylesheet" type="text/css" href="css/flexShrink.css">
 	
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
@@ -30,12 +30,12 @@
 	</section>
 	<main>
 		<div class="default flexContainer">
-			<h1>flex-grow</h1>
-			<p>Это свойство применяется к <i>flex-элементу</i> и определяет возможность элемента увеличиваться, при необходимости. Оно принимает безразмерное значение в качестве пропорции, которое определяет какое количество свободного пространства <i>основной оси</i> внутри контейнера должен занимать элемент. Нельзя указывать отрицательные значения.</p>
+			<h1>flex-shrink</h1>
+			<p>Это свойство применяется к <i>flex-элементу</i> и определяет возможность элемента уменьшаться, при необходимости. Оно принимает безразмерное значение в качестве пропорции, которое определяет какое количество свободного пространства <i>основной оси</i> внутри контейнера должен занимать элемент. Нельзя указывать отрицательные значения.</p>
 		</div>
 		<article class="default flexContainer">
-			<h3>flex-grow: 0;</h3>
-			<p>По умолчанию. Flex-элементы не растягиваются.</p>
+			<h3>flex-shrink: 0;</h3>
+			<p>Flex-элементы не уменьшаются в размерах.</p>
 			<div class="flex">
 				<div class="code">
 					<div class="containerCode"></div>
@@ -48,19 +48,26 @@
 					<div class="elementCode">
 						<p>.flexElement {</p>
 						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 0;</p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock">
-					<div class="flexElement flexFlexGrow0">1</div>
-					<div class="flexElement flexFlexGrow0">2</div>
-					<div class="flexElement flexFlexGrow0">3</div>
+					<div class="flexElement flexFlexShrink0">1</div>
+					<div class="flexElement flexFlexShrink0">2</div>
+					<div class="flexElement flexFlexShrink0">3</div>
+					<div class="flexElement flexFlexShrink0">4</div>
+					<div class="flexElement flexFlexShrink0">5</div>
+					<div class="flexElement flexFlexShrink0">6</div>
+					<div class="flexElement flexFlexShrink0">7</div>
+					<div class="flexElement flexFlexShrink0">8</div>
+					<div class="flexElement flexFlexShrink0">9</div>
 				</div>
 			</div>
 		</article>
 		<article class="default flexContainer">
-			<h3>flex-grow: 1;</h3>
-			<p>Свободное пространство <i>основной оси flex-контейнера</i> будет равномерно распределено между всеми flex-элементами.</p>
+			<h3>flex-shrink: 1;</h3>
+			<p>По умолчанию. Flex-элементы будут равномерно сужаться.</p>
 			<div class="flex">
 				<div class="code">
 					<div class="containerCode"></div>
@@ -72,20 +79,27 @@
 						<p>}</p>
 					<div class="elementCode">
 						<p>.flexElement {</p>
-						<p>flex-grow: 1;</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 1;</p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock">
-					<div class="flexElement flexFlexGrow1">1</div>
-					<div class="flexElement flexFlexGrow1">2</div>
-					<div class="flexElement flexFlexGrow1">3</div>
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement">4</div>
+					<div class="flexElement">5</div>
+					<div class="flexElement">6</div>
+					<div class="flexElement">7</div>
+					<div class="flexElement">8</div>
+					<div class="flexElement">9</div>
 				</div>
 			</div>
 		</article>
 		<article class="default flexContainer">
-			<h3>flex-grow: 2;</h3>
-			<p>Свободное пространство <i>основной оси flex-контейнера</i> будет распределено между flex-элементами пропорционально заданному значению flex-grow.</p>
+			<h3>flex-shrink: 2;</h3>
+			<p>Flex-элементы будут сужаться пропорционально заданному flex-shrink.</p>
 			<div class="flex">
 				<div class="code">
 					<div class="containerCode"></div>
@@ -97,19 +111,27 @@
 						<p>}</p>
 					<div class="elementCode">
 						<p>.flexElement {</p>
-						<p>flex-grow: 1;</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 1;</p>
 						<p>}</p>
 					</div>
 					<div class="elementCode">
-						<p>.flexElement:nth-of-type(2) {</p>
-						<p>flex-grow: 2;</p>
+						<p>.flexElement:nth-of-type(even) {</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 2;</p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock">
-					<div class="flexElement flexFlexGrow1">1</div>
-					<div class="flexElement flexFlexGrow2">2</div>
-					<div class="flexElement flexFlexGrow1">3</div>
+					<div class="flexElement">1</div>
+					<div class="flexElement flexFlexShrink2">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement flexFlexShrink2">4</div>
+					<div class="flexElement">5</div>
+					<div class="flexElement flexFlexShrink2">6</div>
+					<div class="flexElement">7</div>
+					<div class="flexElement flexFlexShrink2">8</div>
+					<div class="flexElement">9</div>
 				</div>
 			</div>
 		</article>
@@ -117,7 +139,7 @@
 			<div class="test">
 				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>Нужно растянуть 2 блок так, чтобы он занимал свободного пространства <i>в 2 раза больше, чем 1 и 3</i>. Справитесь?</p>
+				<p>Нужно задать пропорцию возможного сужения блока с номером 2 в <i>3 раза</i>. Справитесь?</p>
 			</div>
 			<article class="flex">
 				<div class="code">
@@ -130,24 +152,26 @@
 						<p>}</p>
 					<div class="elementCode">
 						<p>.flexElement {</p>
-						<p>flex-grow: 1;</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 1;</p>
 						<p>}</p>
 					</div>
 					<div class="elementCode">
-						<p>.flexElement:nth-of-type(2) {</p>
-						<p>flex-grow: <span id="answer1">1</span> ;<input id="firstFlexAttribute" class="gameInput" type="range" min="0" max="5" value="1"></p>
+						<p>.flexElement:nth-of-type(even) {</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: <span id="answer1">1</span> ;<input id="firstFlexAttribute" class="gameInput" type="range" min="0" max="5" value="1"></p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock" id="firstFlexContainer">
-					<div class="flexElement flexFlexGrow1">1</div>
-					<div class="flexElement flexFlexGrow1" id="firstTask">2</div>
-					<div class="flexElement flexFlexGrow1">3</div>
+					<div class="flexElement">1</div>
+					<div class="flexElement" id="firstTask">2</div>
+					<div class="flexElement">3</div>
 				</div>
 			</article>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>Нужно растянуть 3 блок так, чтобы он занимал свободного пространства <i>в 4 раза больше, чем 1 и 3</i>. Справитесь?</p>
+				<p>Нужно <i>запретить</i> блоку с номером 3 сужаться. Справитесь?</p>
 			</div>
 			<article class="flex">
 				<div class="code">
@@ -160,34 +184,36 @@
 						<p>}</p>
 					<div class="elementCode">
 						<p>.flexElement {</p>
-						<p>flex-grow: 1;</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 1;</p>
 						<p>}</p>
 					</div>
 					<div class="elementCode">
 						<p>.flexElement:nth-of-type(2) {</p>
-						<p>flex-grow: <span id="answer2">1</span> ;<input id="secondFlexAttribute" class="gameInput" type="range" min="0" max="5" value="1"></p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: <span id="answer2">1</span> ;<input id="secondFlexAttribute" class="gameInput" type="range" min="0" max="5" value="1"></p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock" id="secondFlexContainer">
-					<div class="flexElement flexFlexGrow1">1</div>
-					<div class="flexElement flexFlexGrow1">2</div>
-					<div class="flexElement flexFlexGrow1" id="secondTask">3</div>
+					<div class="flexElement">1</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement" id="secondTask">3</div>
 				</div>
 			</article>
 			<p id="result">Ваш результат: 0 из 2.</p>
 		</section>
 		<div class="links">
-			<a href="alignContent.html">
+			<a href="flexGrow.html">
 				<div class="def back">
 					<span>Назад</span>
-					<h3>Свойство align-content для Flex-контейнера</h3>
+					<h3>Свойство flex-grow для Flex-элемента</h3>
 				</div>
 			</a>
-			<a href="flexShrink.html">
+			<a href="#">
 				<div class="def next">
 					<span>Далее</span>
-					<h3>Свойство flex-shrink для Flex-элемента</h3>
+					<h3>#</h3>
 				</div>
 			</a>
 		</div>
@@ -199,6 +225,6 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="js/gameRange.js"></script>	
-	<script type="text/javascript" src="js/flexGrow.js"></script>	
+	<script type="text/javascript" src="js/flexShrink.js"></script>	
 </body>
 </html>
