@@ -1,7 +1,7 @@
 
 @media (min-width: 821px) {
 	.flexBlock {
-		height: 530px;
+		height: 590px;
 	}
 }
 
@@ -17,16 +17,24 @@
 }
 
 .code {
-	height: 530px;
+	height: 590px;
 }
 
 .flexBlock {
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .gameInput {
 	padding: 0;
 	background-color: transparent;
 	border: none;
+}
+
+#firstFlexContainer div {
+	width: 150px;
+}
+#secondFlexContainer div {
+	width: 150px;
 }
