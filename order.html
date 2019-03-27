@@ -6,10 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	<title>Flex-shrink</title>
+	<title>Order</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
-	<link rel="stylesheet" type="text/css" href="css/flexShrink.css">
+	<link rel="stylesheet" type="text/css" href="css/order.css">
 	
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
@@ -30,45 +30,12 @@
 	</section>
 	<main>
 		<div class="default flexContainer">
-			<h1>flex-shrink</h1>
-			<p>Это свойство применяется к <i>flex-элементу</i> и определяет возможность элемента уменьшаться, при необходимости. Оно принимает безразмерное значение в качестве пропорции, которое определяет какое количество свободного пространства <i>основной оси</i> внутри контейнера должен занимать элемент. Нельзя указывать отрицательные значения.</p>
+			<h1>order</h1>
+			<p>Это свойство применяется к <i>flex-элементу</i> и управляет порядком внутри flex-контейнера.</p>
 		</div>
 		<article class="default flexContainer">
-			<h3>flex-shrink: 0;</h3>
-			<p>Flex-элементы не уменьшаются в размерах.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 0;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement flexFlexShrink0">1</div>
-					<div class="flexElement flexFlexShrink0">2</div>
-					<div class="flexElement flexFlexShrink0">3</div>
-					<div class="flexElement flexFlexShrink0">4</div>
-					<div class="flexElement flexFlexShrink0">5</div>
-					<div class="flexElement flexFlexShrink0">6</div>
-					<div class="flexElement flexFlexShrink0">7</div>
-					<div class="flexElement flexFlexShrink0">8</div>
-					<div class="flexElement flexFlexShrink0">9</div>
-				</div>
-			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>flex-shrink: 1;</h3>
-			<p>По умолчанию. Flex-элементы будут равномерно сужаться.</p>
+			<h3>order: 0;</h3>
+			<p>По умолчанию. Все элементы следуют в порядке расположения в HTML коде.</p>
 			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
@@ -83,6 +50,7 @@
 						<p>.flexElement {</p>
 						<p>flex-grow: 0;</p>
 						<p>flex-shrink: 1;</p>
+						<p>order: 0;</p>
 						<p>}</p>
 					</div>
 				</div>
@@ -100,8 +68,8 @@
 			</div>
 		</article>
 		<article class="default flexContainer">
-			<h3>flex-shrink: 2;</h3>
-			<p>Flex-элементы будут сужаться пропорционально заданному flex-shrink.</p>
+			<h3>order: -1;</h3>
+			<p>Flex-элемент с таким значением order будет стоять раньше элементов со значением order: 0.</p>
 			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
@@ -116,24 +84,67 @@
 						<p>.flexElement {</p>
 						<p>flex-grow: 0;</p>
 						<p>flex-shrink: 1;</p>
+						<p>order: 0;</p>
 						<p>}</p>
 					</div>
 					<div class="elementCode">
-						<p>.flexElement:nth-of-type(even) {</p>
+						<p>.flexElement:nth-of-type(3) {</p>
 						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 2;</p>
+						<p>flex-shrink: 1;</p>
+						<p>order: -1;</p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock">
 					<div class="flexElement">1</div>
-					<div class="flexElement flexFlexShrink2">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement flexFlexShrink2">4</div>
+					<div class="flexElement">2</div>
+					<div class="flexElement flexOrder_1">3</div>
+					<div class="flexElement">4</div>
 					<div class="flexElement">5</div>
-					<div class="flexElement flexFlexShrink2">6</div>
+					<div class="flexElement">6</div>
 					<div class="flexElement">7</div>
-					<div class="flexElement flexFlexShrink2">8</div>
+					<div class="flexElement">8</div>
+					<div class="flexElement">9</div>
+				</div>
+			</div>
+		</article>
+		<article class="default flexContainer">
+			<h3>flex-shrink: 1;</h3>
+			<p>Flex-элемент с таким значением order будет стоять позже элементов со значением order: 0.</p>
+			<div class="flex">
+				<div class="code">
+					<div class="containerCode">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap</p>
+						<p>justify-content: center;</p>
+						<p>align-items: center;</p>
+						<p>}</p>
+					</div>
+					<div class="elementCode">
+						<p>.flexElement {</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 1;</p>
+						<p>order: 0;</p>
+						<p>}</p>
+					</div>
+					<div class="elementCode">
+						<p>.flexElement:nth-of-type(2) {</p>
+						<p>flex-grow: 0;</p>
+						<p>flex-shrink: 1;</p>
+						<p>order: 1;</p>
+						<p>}</p>
+					</div>
+				</div>
+				<div class="flexBlock">
+					<div class="flexElement">1</div>
+					<div class="flexElement flexOrder1">2</div>
+					<div class="flexElement">3</div>
+					<div class="flexElement">4</div>
+					<div class="flexElement">5</div>
+					<div class="flexElement">6</div>
+					<div class="flexElement">7</div>
+					<div class="flexElement">8</div>
 					<div class="flexElement">9</div>
 				</div>
 			</div>
@@ -142,7 +153,7 @@
 			<div class="test">
 				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>Нужно задать пропорцию возможного сужения блока с номером 2 в <i>3 раза</i>. Справитесь?</p>
+				<p>Нужно задать максимально возможное значение order, чтобы flex-элемент с номером 2 стоял первым. Справитесь?</p>
 			</div>
 			<article class="flex">
 				<div class="code">
@@ -158,24 +169,26 @@
 						<p>.flexElement {</p>
 						<p>flex-grow: 0;</p>
 						<p>flex-shrink: 1;</p>
+						<p>order: 1;</p>
 						<p>}</p>
 					</div>
 					<div class="elementCode">
 						<p>.flexElement:nth-of-type(2) {</p>
 						<p>flex-grow: 0;</p>
-						<p>flex-shrink: <span id="answer1">1</span> ;<input id="firstFlexAttribute" class="gameInput" type="range" min="0" max="5" value="1"></p>
+						<p>flex-shrink: 1;</p>
+						<p>order: <span id="answer1">1</span> ;<input id="firstFlexAttribute" class="gameInput" type="range" min="-5" max="5" value="1"></p>
 						<p>}</p>
 					</div>
 				</div>
 				<div class="flexBlock" id="firstFlexContainer">
-					<div class="flexElement">1</div>
+					<div class="flexElement flexOrder1">1</div>
 					<div class="flexElement" id="firstTask">2</div>
-					<div class="flexElement">3</div>
+					<div class="flexElement flexOrder1">3</div>
 				</div>
 			</article>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>Нужно <i>запретить</i> блоку с номером 3 сужаться. Справитесь?</p>
+				<p>Нужно задать минимальное возможное значение order, чтобы flex-элемент с номером 3 стоял первым. Справитесь?</p>
 			</div>
 			<article class="flex">
 				<div class="code">
@@ -191,12 +204,14 @@
 						<p>.flexElement {</p>
 						<p>flex-grow: 0;</p>
 						<p>flex-shrink: 1;</p>
+						<p>order: 0;</p>
 						<p>}</p>
 					</div>
 					<div class="elementCode">
 						<p>.flexElement:nth-of-type(3) {</p>
 						<p>flex-grow: 0;</p>
-						<p>flex-shrink: <span id="answer2">1</span> ;<input id="secondFlexAttribute" class="gameInput" type="range" min="0" max="5" value="1"></p>
+						<p>flex-shrink: 1;</p>
+						<p>order: <span id="answer2">0</span> ;<input id="secondFlexAttribute" class="gameInput" type="range" min="-5" max="5" value="0"></p>
 						<p>}</p>
 					</div>
 				</div>
@@ -209,16 +224,16 @@
 			<p id="result">Ваш результат: 0 из 2.</p>
 		</section>
 		<div class="links">
-			<a href="flexGrow.html">
+			<a href="flexBasis.html">
 				<div class="def back">
 					<span>Назад</span>
-					<h3>Свойство flex-grow для Flex-элемента</h3>
+					<h3>Свойство flex-basis для Flex-элемента</h3>
 				</div>
 			</a>
-			<a href="flexBasis.html">
+			<a href="#">
 				<div class="def next">
 					<span>Далее</span>
-					<h3>Свойство flex-basis для Flex-элемента</h3>
+					<h3>#</h3>
 				</div>
 			</a>
 		</div>
@@ -230,6 +245,6 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="js/gameRange.js"></script>	
-	<script type="text/javascript" src="js/flexShrink.js"></script>	
+	<script type="text/javascript" src="js/order.js"></script>	
 </body>
 </html>
