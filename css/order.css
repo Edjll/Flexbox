@@ -1,5 +1,4 @@
 
-
 .flexElement {
 	justify-content: center;
 	align-items: center;
@@ -15,11 +14,4 @@
 	padding: 0;
 	background-color: transparent;
 	border: none;
-}
-
-#firstFlexContainer div {
-	width: 150px;
-}
-#secondFlexContainer div {
-	width: 150px;
 }

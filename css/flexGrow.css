@@ -1,23 +1,7 @@
 
-@media (min-width: 821px) {
-	.flexBlock {
-		height: 530px;
-	}
-}
-
-@media (max-width: 820px) {
-	.flexBlock {
-		height: 250px;
-	}
-}
-
 .flexElement {
 	justify-content: center;
 	align-items: center;
-}
-
-.code {
-	height: 530px;
 }
 
 .flexBlock {

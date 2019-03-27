@@ -212,6 +212,66 @@
 	flex-shrink: 5;
 }
 
+.flexOrder_5 {
+	order: -5;
+}
+.flexOrder_4 {
+	order: -4;
+}
+.flexOrder_3 {
+	order: -3;
+}
+.flexOrder_2 {
+	order: -2;
+}
+.flexOrder_1 {
+	order: -1;
+}
+.flexOrder0 {
+	order: 0;
+}
+.flexOrder1 {
+	order: 1;
+}
+.flexOrder2 {
+	order: 2;
+}
+.flexOrder3 {
+	order: 3;
+}
+.flexOrder4 {
+	order: 4;
+}
+.flexOrder5 {
+	order: 5;
+}
+
+.flexFlexBasisAuto {
+	flex-basis: auto;
+}
+.flexFlexBasisContent {
+	flex-basis: content;
+}
+.flexFlexBasis0 {
+	flex-basis: 0;
+}
+.flexFlexBasis1 {
+	flex-basis: 20%;
+}
+.flexFlexBasis2 {
+	flex-basis: 40%;
+}
+.flexFlexBasis3 {
+	flex-basis: 60%;
+}
+.flexFlexBasis4 {
+	flex-basis: 80%;
+}
+.flexFlexBasis5 {
+	flex-basis: 100%;
+}
+
+
 .trueAnswer {
 	background-color: green;
 }

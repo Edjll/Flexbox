@@ -1,5 +1,4 @@
 
-
 .flexElement {
 	justify-content: center;
 	align-items: center;
@@ -17,9 +16,8 @@
 	border: none;
 }
 
-#firstFlexContainer div {
-	width: 150px;
-}
-#secondFlexContainer div {
-	width: 150px;
+@supports not (flex-basis: content) {
+	.basisContentSupport {
+		display: none;
+	}
 }

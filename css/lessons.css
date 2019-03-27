@@ -17,6 +17,7 @@ ul li::before {
 	content: "";
     display: block;
     background-color: blue;
+    border-radius: 50%;
     width: 21px;
     height: 21px;
     position: relative;

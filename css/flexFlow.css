@@ -2,22 +2,4 @@
 	.gameInput {
 		width: 174px;
 	}
-
-	.code {
-		height: 195px;
-	}
-
-	.flexBlock {
-		height: 195px;
-	}
-}
-
-@media (max-width: 380px) {
-	.code {
-		height: 220px;
-	}
-
-	.flexBlock {
-		height: 220px;
-	}
 }

@@ -10,27 +10,14 @@ h3 {
 	.gameInput {
 		width: 137px;
 	}
-
-	.code {
-		height: 195px;
-	}
-
-	.flexBlock {
-		height: 195px;
-	}
 }
 
 @media (max-width: 380px) {
 	.code {
-		height: 210px;
 		padding-right: 0;
 	}
 
 	.code p:not(:last-of-type):not(:first-of-type) {
 		margin-left: 13px;
-	}
-
-	.flexBlock {
-		height: 210px;
 	}
 }
