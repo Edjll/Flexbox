@@ -1,10 +1,9 @@
 
 var amountTrueAnswer = 0;
-var names = ['0', '1', '2', '3', '4', '5'];
+var names = [ '0', '1', '2', '3', '4', '5', '-1', '-2', '-3', '-4', '-5'];
 var defaulInputClass = document.getElementById('firstFlexAttribute').className;
 var question = [];
 var defaultFlexElements;
-var namesContainers = ['firstTask', 'secondTask'];
 
 function arr(amountQuestion) {
 	for (var i = 0; i < amountQuestion; i++) {
@@ -32,6 +31,11 @@ function arr(amountQuestion) {
 	}
 }
 
+function newName(name) {
+ 	name = name.replace('-', '_');
+	return name;
+}
+
 function gameRange(id, idContainer, idBlock, type, name, number, amountQuestion, idTask, defaultClassBlock) {
 	id.oninput = function() {
 		var inputElement = document.getElementById(this.id);
@@ -41,20 +45,27 @@ function gameRange(id, idContainer, idBlock, type, name, number, amountQuestion,
 		question[number] = 0;
 		inputElement.className = defaulInputClass;
 		colorElements(elementsColor, ' flexElementFalse', classElement);
+		var newNames = [];
 		for (var i = 0; i < names.length; i++) { 
 			if (inputElement.value === names[i]) {
-				classElement.className = 'flexElement' + type + names[i] + ' flexElementFalse';
+				newNames[i] = newName(names[i]);
+				classElement.className = 'flexElement' + type + newNames[i] + ' flexElementFalse';
 				inputElement.className = defaulInputClass + ' falseAnswer';
 			}
 		}
 		if (inputElement.value === name) {
 			inputElement.className = defaulInputClass + ' trueAnswer';
-			var block = 'flexElement' + type + names[inputElement.value];
+			var t;
+			(inputElement.value < 0)?(t = Math.abs(inputElement.value) + 5):(t = inputElement.value);
+			var block = 'flexElement' + type + newNames[t];
 			colorElements(elementsColor, ' flexElementTrue', classElement, block);
 			question[number] = 1;
 		}
 		sumAnswer(amountQuestion);
-		idTask.innerHTML = inputElement.value;
+		if (type ===' flexFlexBasis') {
+			var x = (inputElement.value*20 !== 0)?'%':'';
+			idTask.innerHTML = inputElement.value*20 + x;
+		} else idTask.innerHTML = inputElement.value;
 		result.innerHTML = 'Ваш результат: ' + amountTrueAnswer + ' из ' + amountQuestion +'.';
 	} 
 }
