@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="align-content, stretch, center, flex-start, flex-end, space-around, space-between, space-evenly, русский язык, выравнивание flex-строк">
+	<meta name="description" content="Свойство align-content">
 	<title>Align-content</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/alignContent.css">
@@ -13,228 +13,236 @@
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<div class="default flexContainer">
-			<h1>align-content</h1>
-			<p>Определяет выравнивание строк (или столбцов, зависит от направления <i>основной оси</i>) по поперечной оси (<i>cross axis</i>). Похож на <i>align-items</i>, но применяется ко всему содержимому строки (или столбца). Работает только при наличии нескольких строк (или столбцов)</p>
-		</div>
-		<article class="default flexContainer">
-			<h3>align-content: stretch;</h3>
-			<p>Установлен по умолчанию. Строки (или столбцы, зависит от направления <i>основной оси</i>) будут растягиваться по <i>поперечной оси</i> .Соблюдает размеры установленные элементу.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: stretch;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexAlignContentStretch">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
-				</div>
+		<article class="aboutProperty">
+			<div class="default">
+				<h1>align-content</h1>
+				<p>Определяет выравнивание строк (или столбцов, зависит от направления <b>основной оси</b>) по поперечной оси (<b>cross axis</b>). Похож на <b>align-items</b>, но применяется ко всему содержимому строки (или столбца). Работает только при наличии нескольких строк (или столбцов)</p>
 			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>align-content: flex-start;</h3>
-			<p>Строки (или столбцы) будут прижиматься к началу <i>поперечной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: flex-start;</p>
-					<p>}</p>
+			<section class="default">
+				<h2>align-content: stretch;</h2>
+				<p>Установлен по умолчанию. Строки (или столбцы, зависит от направления <b>основной оси</b>) будут растягиваться по <b>поперечной оси</b> .Соблюдает размеры установленные элементу.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: stretch;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentStretch">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
 				</div>
-				<div class="flexBlock flexAlignContentFlexStart">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+			</section>
+			<section class="default">
+				<h2>align-content: flex-start;</h2>
+				<p>Строки (или столбцы) будут прижиматься к началу <b>поперечной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: flex-start;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentFlexStart">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
 				</div>
-			</div>
+			</section>
+			<section class="default">
+				<h2>align-content: flex-end;</h2>
+				<p>Строки (или столбцы) будут прижиматься к концу <b>поперечной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: flex-end;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentFlexEnd">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>align-content: center;</h2>
+				<p>Строки (или столбцы) будут распологаться по центру <b>поперечной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: center;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentCenter">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>align-content: space-around;</h2>
+				<p>Строки (или столбцы) располагаются так, чтобы пространство возле них было одинаковым, но расстояние между строками (или столбцами) визуально не равно расстоянию между началом <b>поперечной оси</b> и первой строкой (или столбцом), а также последней строкой (или столбцом) и концом <b>поперечной оси</b>, так как между строками (или столбцами) будет двойное пространство, полученное суммой пространств строк (или столбцов).</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: space-around;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentSpaceAround">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>align-content: space-between;</h2>
+				<p>Строки (или столбцы) располагаются так, чтобы свободного пространства между первой строкой (или столбцом) и началом <b>поперечной оси</b>, а также последней строкой (или столбцом) и концом <b>поперечной оси</b>, не было.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: space-between;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentSpaceBetween">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>align-content: space-evenly;</h2>
+				<p>Похож на space-around, но расстояния между строками (или столбцами) равны расстоянию между началом <b>поперченой оси</b> и первой строкой (или столбцом), а также последней строкой (или столбцом) и концом <b>поперечной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>align-content: space-evenly;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexAlignContentSpaceEvenly">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+						<div class="flexElement"><span>10</span></div>
+						<div class="flexElement"><span>11</span></div>
+						<div class="flexElement"><span>12</span></div>
+					</div>
+				</div>
+			</section>
 		</article>
 		<article class="default">
-			<h3>align-content: flex-end;</h3>
-			<p>Строки (или столбцы) будут прижиматься к концу <i>поперечной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: flex-end;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexAlignContentFlexEnd">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>align-content: center;</h3>
-			<p>Строки (или столбцы) будут распологаться по центру <i>поперечной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: center;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexAlignContentCenter">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>align-content: space-around;</h3>
-			<p>Строки (или столбцы) располагаются так, чтобы пространство возле них было одинаковым, но расстояние между строками (или столбцами) визуально не равно расстоянию между началом <i>поперечной оси</i> и первой строкой (или столбцом), а также последней строкой (или столбцом) и концом <i>поперечной оси</i>, так как между строками (или столбцами) будет двойное пространство, полученное суммой пространств строк (или столбцов).</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: space-around;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexAlignContentSpaceAround">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>align-content: space-between;</h3>
-			<p>Строки (или столбцы) располагаются так, чтобы свободного пространства между первой строкой (или столбцом) и началом <i>поперечной оси</i>, а также последней строкой (или столбцом) и концом <i>поперечной оси</i>, не было.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: space-between;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexAlignContentSpaceBetween">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>align-content: space-evenly;</h3>
-			<p>Похож на space-around, но расстояния между строками (или столбцами) равны расстоянию между началом <i>поперченой оси</i> и первой строкой (или столбцом), а также последней строкой (или столбцом) и концом <i>поперечной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>align-content: space-evenly;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexAlignContentSpaceEvenly">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
-				</div>
-			</div>
-		</article>
-		<section class="default flexContainer">
+			<h2>Давайте проверим, как вы усвоили это свойство?</h2>
 			<div class="test">
-				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>В этом задании нужно разместить строки <i>по центру поперечной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки <b>по центру поперечной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -244,25 +252,25 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock" id="firstFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>В этом задании нужно разместить строки так, чтобы <i>они прижимались к началу поперечной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки так, чтобы <b>они прижимались к началу поперечной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -272,25 +280,25 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexAlignContentFlexEnd" id="secondFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Третье задание</p>
-				<p>В этом задании нужно разместить строки так, чтобы <i>они растягивались по поперечной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки так, чтобы <b>они растягивались по поперечной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -300,25 +308,25 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexAlignContentSpaceAround" id="thirdFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Четвёртое задание</p>
-				<p>В этом задании нужно разместить строки так, чтобы <i>расстояние между ними было вдвое больше, чем расстояние между первой строкой и началом поперечной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки так, чтобы <b>расстояние между ними было вдвое больше, чем расстояние между первой строкой и началом поперечной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -328,25 +336,25 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexAlignContentFlexEnd" id="fourthFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Пятое задание</p>
-				<p>В этом задании нужно разместить строки так, чтобы <i>они прижимались к концу поперечной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки так, чтобы <b>они прижимались к концу поперечной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -356,25 +364,25 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexAlignContentSpaceEvenly" id="fivethFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Шестое задание</p>
-				<p>В этом задании нужно разместить строки так, чтобы <i>не было пространства между первой строкой и началом поперечной оси, а также последней строкой и концом поперечной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки так, чтобы <b>не было пространства между первой строкой и началом поперечной оси, а также последней строкой и концом поперечной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -384,25 +392,25 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexAlignContentCenter" id="sixthFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Седьмое задание</p>
-				<p>В этом задании нужно разместить строки так, чтобы <i>любое свободное пространство было одинаковым</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить строки так, чтобы <b>любое свободное пространство было одинаковым</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -412,44 +420,40 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexAlignContentFlexEnd" id="seventhFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-					<div class="flexElement">10</div>
-					<div class="flexElement">11</div>
-					<div class="flexElement">12</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
+					<div class="flexElement"><span>9</span></div>
+					<div class="flexElement"><span>10</span></div>
+					<div class="flexElement"><span>11</span></div>
+					<div class="flexElement"><span>12</span></div>
 				</div>
-			</article>
-			<p id="result">Ваш результат: 0 из 7.</p>
-		</section>
-		<div class="links">
-			<a href="justifyContent.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Свойство align-items для Flex-контейнера</h3>
-				</div>
-			</a>
-			<a href="flexGrow.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство flex-grow для Flex-элемента</h3>
-				</div>
-			</a>
-		</div>
+			</div>
+			<p id="result">Ваш результат: <b>0</b> из <b>7</b>.</p>
+		</article>
 	</main>
+	<div class="links" id="link">
+		<a href="alignItems.html" class="absoluteTop back">
+			<span class="textLink">align-items</span>
+		</a>
+		<a href="flexGrow.html" class="absoluteTop next">
+			<span class="textLink">flex-grow</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/gameScript.js"></script>	
-	<script type="text/javascript" src="js/alignContent.js"></script>	
+	<script src="js/loader.js"></script>
+	<script src="js/gameScript.js"></script>	
+	<script src="js/alignContent.js"></script>
+	<script src="js/scrollButton.js"></script>	
 </body>
 </html>

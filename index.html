@@ -4,60 +4,68 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="flexbox, русский язык, флексбокс, флекс, flex">
+	<meta name="description" content="Основы Flexbox и его терминология">
 	<title>Flexbox</title>
-	<link rel="stylesheet"type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<article class="preface default">
+		<article class="default">
 			<h2>Зачем нужен Flexbox?</h2>
-			<p>Модуль Flexbox Layout (Flexible Box) направлен на то чтобы предоставить более эффективный способ расположения, выравнивания и распределения свободного пространства между элементами в контейнере, даже когда их размер заранее неизвестен и/или динамичен.</p>
+			<p>Модуль Flexbox Layout (Flexible Box) направлен на то, чтобы предоставить более эффективный способ расположения, выравнивания и распределения свободного пространства между элементами в контейнере, даже когда их размер заранее неизвестен и/или динамичен.</p>
 			<p>Основная идея гибкой (flex) разметки заключается в том, чтобы предоставить контейнеру возможность изменять ширину/высоту и порядок своих элементов, для того чтобы наилучшим образом заполнить доступное пространство (в основном для размещения на всех типах и размерах экранов). Flexbox контейнер расширяет элементы чтобы заполнить свободное пространство или сжимает их чтобы избежать переполнения.</p>
 		</article>
-		<article class="basics default">
+		<article class="default" id="terms">
 			<h2>Основы Flexbox и его терминология</h2>
 			<p>Flexbox является модулем и содержит целый набор свойств. Одни свойства устанавливаются контейнеру (родительскому элементу, который называется "flex-контейнер"), а другие дочерним элементам ("flex-элементы").</p>
 			<p>В отличии от блочных систем компоновки, основанных на блочных и строковых направлениях, Flexbox основан на "flex-flow" направлениях. </p>
-			<img src="img/flex-flow.png" class="basicsImg">
+			<img src="img/basicsTerms.png" class="basicsImg" alt="basics terms" id="imgScale">
 			<ul class="terms">
-				<li><span><strong>main axis</strong> - это основная ось flex-контейнера, вдоль которой расположены flex-элементы. Она зависит от свойства <i>flex-direction</i>;</span></li>
-				<li><span><strong>cross axis</strong> - это ось перпендикулярная основной оси, которая называется "<i>поперечной</i>" осью. Её направление зависит от направления основной оси;</span></li>
-				<li><span><strong>main-start | main-end</strong> - flex-элементы размещаются внутри контейнера, начиная с <i>main-start</i> и заканчивая <i>main-end</i>;</span></li>
-				<li><span><strong>cross-start | cross-end</strong> - flex-элементы размещаются внутри контейнера, начиная с <i>cross-start</i> и заканчивая <i>cross-end</i>;</li>
-				<li><span><strong>main size</strong> - ширина или высота flex-элемента, в зависимости направления основной оси (<i>main axis</i>);</span></li>
-				<li><span><strong>cross size</strong> - ширина или высота flex-элемента, в зависимости направления поперечной оси (<i>cross axis</i>);</span></li>
+				<li><span><strong>main axis</strong> - это основная ось flex-контейнера, вдоль которой расположены flex-элементы. Она зависит от свойства <b>flex-direction</b>;</span></li>
+				<li><span><strong>cross axis</strong> - это ось перпендикулярная основной оси, которая называется "<b>поперечной</b>" осью. Её направление зависит от направления основной оси;</span></li>
+				<li><span><strong>main-start | main-end</strong> - flex-элементы размещаются внутри контейнера, начиная с <b>main-start</b> и заканчивая <b>main-end</b>;</span></li>
+				<li><span><strong>cross-start | cross-end</strong> - flex-элементы размещаются внутри контейнера, начиная с <b>cross-start</b> и заканчивая <b>cross-end</b>;</span></li>
+				<li><span><strong>main size</strong> - ширина или высота flex-элемента, в зависимости направления основной оси (<b>main axis</b>);</span></li>
+				<li><span><strong>cross size</strong> - ширина или высота flex-элемента, в зависимости направления поперечной оси (<b>cross axis</b>);</span></li>
 			</ul>
 		</article>
-		<a href="properties.html" class="nextA">
-			<div class="next">
-				<span>Далее</span>
-				<h3>Свойства Flexbox</h3>
-			</div>
-		</a>
 	</main>
+	<div class="links" id="link">
+		<a href="properties.html" class="absoluteTop next">
+			<span class="textLink">Деление свойств Flexbox</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
+	<script src="js/loader.js"></script>
+	<script src="js/scrollButton.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>

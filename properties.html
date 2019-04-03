@@ -4,76 +4,134 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="свойства, flex, русский язык">
+	<meta name="description" content="Свойства flexbox">
 	<title>Properties</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/properties.css">
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<div class="default">
-			<h2>Деление свойств Flexbox</h2>
-			<p>Свойства Flexbox делятся на свойства для родительского элемента (<i>Flex-контейнера</i>) и для дочерних элементов (<i>Flex-элементов</i>).</p>
-		</div>
-		<article class="default flexContainer">
-			<h2>Свойства Flexbox для родительского элемента (<i>Flex-контейнера</i>)</h2>
-			<ul>
-				<li><a href="display.html">display</a></li>
-				<li><a href="flexDirection.html">flex-direction</a></li>
-				<li><a href="flexWrap.html">flex-wrap</a></li>
-				<li><a href="flexFlow.html">flex-flow</a></li>
-				<li><a href="justifyContent.html">justify-content</a></li>
-				<li><a href="alignItems.html">align-items</a></li>
-				<li><a href="alignContent.html">align-content</a></li>
-			</ul>
+		<article>
+			<div class="default">
+				<h2>Деление свойств Flexbox</h2>
+				<p>Свойства Flexbox делятся на свойства для родительского элемента (<b>Flex-контейнера</b>) и для дочерних элементов (<b>Flex-элементов</b>).</p>
+			</div>
+			<section class="default hov">
+				<h2>Свойства Flexbox для родительского элемента (<b>Flex-контейнера</b>)</h2>
+				<ul>
+					<li>
+						<a href="display.html">
+								<span>display</span>
+						</a>
+					</li>
+					<li>
+						<a href="flexDirection.html">
+								<span>flex-direction</span>
+						</a>
+					</li>
+					<li>
+						<a href="flexWrap.html">
+								<span>flex-wrap</span>
+						</a>
+					</li>
+					<li>
+						<a href="flexFlow.html">
+								<span>flex-flow</span>
+						</a>
+					</li>
+					<li>
+						<a href="justifyContent.html">
+								<span>justify-content</span>
+						</a>
+					</li>
+					<li>
+						<a href="alignItems.html">
+								<span>align-items</span>
+						</a>
+					</li>
+					<li>
+						<a href="alignContent.html">
+								<span>align-content</span>
+						</a>
+					</li>
+					<li>
+				</ul>
+			</section>
+			<section class="default hov">
+				<h2>Свойства Flexbox для дочерних элементов (<b>Flex-элементов</b>)</h2>
+				<ul>
+					<li>
+						<a href="flexGrow.html">
+								<span>flex-grow</span>
+						</a>
+					</li>
+					<li>
+						<a href="flexShrink.html">
+								<span>flex-shrink</span>
+						</a>
+					</li>
+					<li>
+						<a href="flexBasis.html">
+								<span>flex-basis</span>
+						</a>
+					</li>
+					<li>
+						<a href="flex.html">
+								<span>flex</span>
+						</a>
+					</li>
+					<li>
+						<a href="order.html">
+								<span>order</span>
+						</a>
+					</li>
+					<li>
+						<a href="alignSelf.html">
+								<span>align-self</span>
+						</a>
+					</li>
+					<li>
+				</ul>
+			</section>
 		</article>
-		<article class="default flexContainer">
-			<h2>Свойства Flexbox для дочерних элементов (<i>Flex-элементов</i>)</h2>
-			<ul>
-				<li><a href="flexGrow.html">flex-grow</a></li>
-				<li><a href="flexShrink.html">flex-shrink</a></li>
-				<li><a href="flexBasis.html">flex-basis</a></li>
-				<li><a href="flex.html">flex</a></li>
-				<li><a href="order.html">order</a></li>
-				<li><a href="#">align-self</a></li>
-			</ul>
-		</article>
-		<div class="links">
-			<a href="index.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Главная</h3>
-				</div>
-			</a>
-			<a href="display.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство display для Flex-контейнера</h3>
-				</div>
-			</a>
-		</div>
 	</main>
+	<div class="links" id="link">
+		<a href="index.html" class="static back">
+			<span class="textLink">Зачем нужен Flexbox?</span>
+		</a>
+		<a href="display.html" class="static next">
+			<span class="textLink">display</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>	
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
+	<script src="js/loader.js"></script>
+	<script src="js/scrollButton.js"></script>
 </body>
 </html>

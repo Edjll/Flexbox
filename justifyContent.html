@@ -4,160 +4,168 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="justify-content, flex-start, flex-end, center, space-around, space-between, space-evenly, русский язык, выравнивание flex-элементов">
+	<meta name="description" content="Свойство justify-content">
 	<title>Justify-content</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<div class="default flexContainer">
-			<h1>justify-content</h1>
-			<p>Определяет выравнивание вдоль основной оси (<i>main axis</i>). Это помогает распределить свободное пространство, оставшееся после того как все фиксированные и не фиксированные по ширине flex-элементы достигли максимального размера.</p>
-		</div>
-		<article class="default flexContainer">
-			<h3>justify-content: flex-start;</h3>
-			<p>Установлен по умолчанию. Flex-элементы будут прижиматься к <i>основной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-start;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexJustifyContentFlexStart">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-				</div>
+		<article>
+			<div class="default">
+				<h1>justify-content</h1>
+				<p>Определяет выравнивание вдоль основной оси (<b>main axis</b>). Это помогает распределить свободное пространство, оставшееся после того как все фиксированные и не фиксированные по ширине flex-элементы достигли максимального размера.</p>
 			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>justify-content: flex-end;</h3>
-			<p>Flex-элементы будут прижиматься к концу <i>основной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: flex-end;</p>
-					<p>}</p>
+			<section class="default">
+				<h2>justify-content: flex-start;</h2>
+				<p>Установлен по умолчанию. Flex-элементы будут прижиматься к <b>основной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-start;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexJustifyContentFlexStart">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+					</div>
 				</div>
-				<div class="flexBlock flexJustifyContentFlexEnd">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+			</section>
+			<section class="default">
+				<h2>justify-content: flex-end;</h2>
+				<p>Flex-элементы будут прижиматься к концу <b>основной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: flex-end;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexJustifyContentFlexEnd">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+					</div>
 				</div>
-			</div>
+			</section>
+			<section class="default">
+				<h2>justify-content: center;</h2>
+				<p>Flex-элементы располагаются по центру <b>основной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: center;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexJustifyContentCenter">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>justify-content: space-between;</h2>
+				<p>Flex-элементы располагаются так, чтобы свободного пространства между первым элементом и началом <b>основной оси</b>, а также последнего элемента и концом <b>основной оси</b>, не было.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: space-between;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexJustifyContentSpaceBetween">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>justify-content: space-around;</h2>
+				<p>Flex-элементы располагаются так, чтобы пространство возле них было одинаковым, но расстояние между элементами визуально не равно расстоянию между началом <b>основной оси</b> и первым элементом, а также последним элементом и концом <b>основной оси</b>, так как между flex-элементами будет двойное пространство, полученное суммой пространств flex-элементов.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: space-around;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexJustifyContentSpaceAround">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>justify-content: space-evenly;</h2>
+				<p>Похож на space-around, но расстояния между flex-элементами равны расстоянию между началом <b>основной оси</b> и первым элементом, а также последним элементом и концом <b>основной оси</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-flow: row nowrap;</p>
+						<p>justify-content: space-evenly;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexJustifyContentSpaceEvenly">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+					</div>
+				</div>
+			</section>
 		</article>
 		<article class="default">
-			<h3>justify-content: center;</h3>
-			<p>Flex-элементы располагаются по центру <i>основной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: center;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexJustifyContentCenter">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>justify-content: space-between;</h3>
-			<p>Flex-элементы располагаются так, чтобы свободного пространства между первым элементом и началом <i>основной оси</i>, а также последнего элемента и концом <i>основной оси</i>, не было.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: space-between;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexJustifyContentSpaceBetween">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>justify-content: space-around;</h3>
-			<p>Flex-элементы располагаются так, чтобы пространство возле них было одинаковым, но расстояние между элементами визуально не равно расстоянию между началом <i>основной оси</i> и первым элементом, а также последним элементом и концом <i>основной оси</i>, так как между flex-элементами будет двойное пространство, полученное суммой пространств flex-элементов.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: space-around;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexJustifyContentSpaceAround">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-				</div>
-			</div>
-		</article>
-		<article class="default">
-			<h3>justify-content: space-evenly;</h3>
-			<p>Похож на space-around, но расстояния между flex-элементами равны расстоянию между началом <i>основной оси</i> и первым элементом, а также последним элементом и концом <i>основной оси</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-flow: row nowrap;</p>
-					<p>justify-content: space-evenly;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexJustifyContentSpaceEvenly">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-				</div>
-			</div>
-		</article>
-		<section class="default flexContainer">
+			<h2>Давайте проверим, как вы усвоили это свойство?</h2>
 			<div class="test">
-				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>В этом задании нужно разместить все flex-элементы так, чтобы <i>они занимали всё пространство основной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы так, чтобы они занимали всё пространство <b>основной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -166,18 +174,18 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexJustifyContentSpaceAround" id="firstFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>В этом задании нужно разместить все flex-элементы так, чтобы <i>они прижимались к концу основной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы так, чтобы они прижимались к концу <b>основной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -186,18 +194,18 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexJustifyContentCenter" id="secondFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Третье задание</p>
-				<p>В этом задании нужно разместить все flex-элементы так, чтобы <i>они распологались по центру основной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы так, чтобы они распологались по центру <b>основной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -206,18 +214,18 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexJustifyContentSpaceEvenly" id="thirdFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Четвёртое задание</p>
-				<p>В этом задании нужно разместить все flex-элементы так, чтобы <i>они прижимались к началу основной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы так, чтобы они прижимались к началу <b>основной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -226,18 +234,18 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexJustifyContentSpaceBetween" id="fourthFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Пятое задание</p>
-				<p>В этом задании нужно разместить все flex-элементы так, чтобы <i>любое свободное пространство основной оси было одинаковым</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы так, чтобы любое свободное пространство <b>основной оси</b> было одинаковым. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -246,18 +254,18 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock" id="fivethFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Шестое задание</p>
-				<p>В этом задании нужно разместить все flex-элементы так, чтобы <i>расстояние между элементами было вдвое больше расстояния между первым элементом и началом основной оси и последним элементом и концом основной оси</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы так, чтобы расстояние между элементами было вдвое больше расстояния между первым элементом и началом <b>основной оси</b> и последним элементом и концом <b>основной оси</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -266,37 +274,33 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexJustifyContentCenter" id="sixthFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
 				</div>
-			</article>
-			<p id="result">Ваш результат: 0 из 6.</p>
-		</section>
-		<div class="links">
-			<a href="flexFlow.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Свойство flex-flow для Flex-контейнера</h3>
-				</div>
-			</a>
-			<a href="alignItems.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство align-items для Flex-контейнера</h3>
-				</div>
-			</a>
-		</div>
+			</div>
+			<p id="result">Ваш результат: <b>0</b> из <b>6</b>.</p>
+		</article>
 	</main>
+	<div class="links" id="link">
+		<a href="flexFlow.html" class="absoluteTop back">
+			<span class="textLink">flex-flow</span>
+		</a>
+		<a href="alignItems.html" class="absoluteTop next">
+			<span class="textLink">align-items</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/gameScript.js"></script>	
-	<script type="text/javascript" src="js/justifyContent.js"></script>	
+	<script src="js/loader.js"></script>
+	<script src="js/gameScript.js"></script>	
+	<script src="js/justifyContent.js"></script>
+	<script src="js/scrollButton.js"></script>	
 </body>
 </html>

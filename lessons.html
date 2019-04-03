@@ -4,53 +4,122 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="flex, уроки, русский язык">
+	<meta name="description" content="Уроки по flexbox">
 	<title>Lessons</title>
-	<link rel="stylesheet"type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/lessons.css">
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<section class="default">
+		<article class="default">
 			<ul>
-				<li><a href="index.html"><h2>Зачем нужен Flexbox?</h2></a></li>
-				<li><a href="properties.html"><h2>Деление свойств Flexbox</h2></a></li>
-				<li><a href="display.html"><h2>Свойство display для Flex-контейнера</h2></a></li>
-				<li><a href="flexDirection.html"><h2>Свойство flex-direction для Flex-контейнера</h2></a></li>
-				<li><a href="flexWrap.html"><h2>Свойство flex-wrap для Flex-контейнера</h2></a></li>
-				<li><a href="flexFlow.html"><h2>Свойство flex-flow для Flex-контейнера</h2></a></li>
-				<li><a href="justifyContent.html"><h2>Свойство justify-content для Flex-контейнера</h2></a></li>
-				<li><a href="alignItems.html"><h2>Свойство align-items для Flex-контейнера</h2></a></li>
-				<li><a href="alignContent.html"><h2>Свойство align-content для Flex-контейнера</h2></a></li>
-				<li><a href="flexGrow.html"><h2>Свойство flex-grow для Flex-элемента</h2></a></li>
-				<li><a href="flexShrink.html"><h2>Свойство flex-shrink для Flex-элемента</h2></a></li>
-				<li><a href="flexBasis.html"><h2>Свойство flex-basis для Flex-элемента</h2></a></li>
-				<li><a href="flex.html"><h2>Свойство flex для Flex-элемента</h2></a></li>
-				<li><a href="order.html"><h2>Свойство order для Flex-элемента</h2></a></li>
-			</ol>
-		</section>
+				<li>
+					<a href="index.html">
+						<h2>Зачем нужен Flexbox?</h2>
+					</a>
+				</li>
+				<li>
+					<a href="properties.html">
+						<h2>Деление свойств Flexbox</h2>
+					</a>
+				</li>
+				<li>
+					<a href="display.html">
+						<h2>display</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flexDirection.html">
+						<h2>flex-direction</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flexWrap.html">
+						<h2>flex-wrap</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flexFlow.html">
+						<h2>flex-flow</h2>
+					</a>
+				</li>
+				<li>
+					<a href="justifyContent.html">
+						<h2>justify-content</h2>
+					</a>
+				</li>
+				<li>
+					<a href="alignItems.html">
+						<h2>align-items</h2>
+					</a>
+				</li>
+				<li>
+					<a href="alignContent.html">
+						<h2>align-content</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flexGrow.html">
+						<h2>flex-grow</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flexShrink.html">
+						<h2>flex-shrink</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flexBasis.html">
+						<h2>flex-basis</h2>
+					</a>
+				</li>
+				<li>
+					<a href="flex.html">
+						<h2>flex</h2>
+					</a>
+				</li>
+				<li>
+					<a href="order.html">
+						<h2>order</h2>
+					</a>
+				</li>
+				<li>
+					<a href="alignSelf.html">
+						<h2>align-self</h2>
+					</a>
+				</li>
+			</ul>
+		</article>
 	</main>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
+	<script src="js/loader.js"></script>
+	<script src="js/scrollButton.js"></script>
 </body>
 </html>

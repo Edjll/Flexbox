@@ -4,33 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="display, flex, inline-flex, русский язык">
+	<meta name="description" content="Включение flexbox">
 	<title>Display</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/display.css">
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<article class="default flexContainer">
+		<article class="default">
 			<h1>display</h1>
-			<p>display применятся к родительскому элементу (<i>Flex-контейнер</i>). От переданного значения зависит каким будет flex-контейнер (блочным или строчным).</p>
-			<p>Flex-контейнер не является блочным контейнером, поэтому для дочерних элементов не работают такие CSS-свойства, как <i>float</i>, <i>clear</i>, <i>vertical-align</i>.</p>
+			<p>display применятся к родительскому элементу (<b>Flex-контейнер</b>). От переданного значения зависит каким будет flex-контейнер (блочным или строчным).</p>
+			<p>Flex-контейнер не является блочным контейнером, поэтому для дочерних элементов не работают такие CSS-свойства, как <b>float</b>, <b>clear</b>, <b>vertical-align</b>.</p>
 			<div class="code">
 				<p>.flexContainer {</p>
 				<p>display: flex;</p>
@@ -44,26 +50,22 @@
 				<p>}</p>
 			</div>
 		</article>
-		<div class="links">
-			<a href="properties.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Свойства Flexbox</h3>
-				</div>
-			</a>
-			<a href="flexDirection.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство flex-direction для Flex-контейнера</h3>
-				</div>
-			</a>
-		</div>
 	</main>
+	<div class="links" id="link">
+		<a href="properties.html" class="static back">
+			<span class="textLink">Деление свойств Flexbox</span>
+		</a>
+		<a href="flexDirection.html" class="static next">
+			<span class="textLink">flex-direction</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
-	</footer>	
+	</footer>
+	<script src="js/loader.js"></script>
+	<script src="js/scrollButton.js"></script>	
 </body>
 </html>

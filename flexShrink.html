@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="flex-shrink, русский язык, сужение flex-элемента">
+	<meta name="description" content="Свойство flex-shrink">
 	<title>Flex-shrink</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
@@ -14,137 +14,145 @@
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<div class="default flexContainer">
-			<h1>flex-shrink</h1>
-			<p>Это свойство применяется к <i>flex-элементу</i> и определяет возможность элемента уменьшаться, при необходимости. Оно принимает безразмерное значение в качестве пропорции, которое определяет какое количество свободного пространства <i>основной оси</i> внутри контейнера должен занимать элемент. Нельзя указывать отрицательные значения.</p>
-		</div>
-		<article class="default flexContainer">
-			<h3>flex-shrink: 0;</h3>
-			<p>Flex-элементы не уменьшаются в размерах.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 0;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement flexFlexShrink0">1</div>
-					<div class="flexElement flexFlexShrink0">2</div>
-					<div class="flexElement flexFlexShrink0">3</div>
-					<div class="flexElement flexFlexShrink0">4</div>
-					<div class="flexElement flexFlexShrink0">5</div>
-					<div class="flexElement flexFlexShrink0">6</div>
-					<div class="flexElement flexFlexShrink0">7</div>
-					<div class="flexElement flexFlexShrink0">8</div>
-					<div class="flexElement flexFlexShrink0">9</div>
-				</div>
+		<article>
+			<div class="default">
+				<h1>flex-shrink</h1>
+				<p>Это свойство применяется к <b>flex-элементу</b> и определяет возможность элемента уменьшаться, при необходимости. Оно принимает безразмерное значение в качестве пропорции, которое определяет какое количество свободного пространства <b>основной оси</b> внутри контейнера должен занимать элемент. Нельзя указывать отрицательные значения.</p>
 			</div>
+			<section class="default">
+				<h2>flex-shrink: 0;</h2>
+				<p>Flex-элементы не уменьшаются в размерах.</p>
+				<div class="flex">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 0;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement flexFlexShrink0"><span>1</span></div>
+						<div class="flexElement flexFlexShrink0"><span>2</span></div>
+						<div class="flexElement flexFlexShrink0"><span>3</span></div>
+						<div class="flexElement flexFlexShrink0"><span>4</span></div>
+						<div class="flexElement flexFlexShrink0"><span>5</span></div>
+						<div class="flexElement flexFlexShrink0"><span>6</span></div>
+						<div class="flexElement flexFlexShrink0"><span>7</span></div>
+						<div class="flexElement flexFlexShrink0"><span>8</span></div>
+						<div class="flexElement flexFlexShrink0"><span>9</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>flex-shrink: 1;</h2>
+				<p>По умолчанию. Flex-элементы будут равномерно сужаться.</p>
+				<div class="flex">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>flex-shrink: 2;</h2>
+				<p>Flex-элементы будут сужаться пропорционально заданному flex-shrink.</p>
+				<div class="flex">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement:nth-of-type(even) {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 2;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement flexFlexShrink2"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement flexFlexShrink2"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement flexFlexShrink2"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement flexFlexShrink2"><span>8</span></div>
+						<div class="flexElement"><span>9</span></div>
+					</div>
+				</div>
+			</section>
 		</article>
-		<article class="default flexContainer">
-			<h3>flex-shrink: 1;</h3>
-			<p>По умолчанию. Flex-элементы будут равномерно сужаться.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement">9</div>
-				</div>
-			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>flex-shrink: 2;</h3>
-			<p>Flex-элементы будут сужаться пропорционально заданному flex-shrink.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement:nth-of-type(even) {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 2;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement">1</div>
-					<div class="flexElement flexFlexShrink2">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement flexFlexShrink2">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement flexFlexShrink2">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement flexFlexShrink2">8</div>
-					<div class="flexElement">9</div>
-				</div>
-			</div>
-		</article>
-		<section class="default flexContainer">
+		<article class="default">
+			<h2>Давайте проверим, как вы усвоили это свойство?</h2>
 			<div class="test">
-				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>Нужно задать пропорцию возможного сужения блока с номером 2 в <i>3 раза</i>. Справитесь?</p>
+				<p>Нужно задать пропорцию возможного сужения блока с номером 2 в <b>3 раза</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
 						<p>.flexContainer {</p>
@@ -168,16 +176,16 @@
 					</div>
 				</div>
 				<div class="flexBlock" id="firstFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement" id="firstTask">2</div>
-					<div class="flexElement">3</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement" id="firstTask"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>Нужно <i>запретить</i> блоку с номером 3 сужаться. Справитесь?</p>
+				<p>Нужно <b>запретить</b> блоку с номером 3 сужаться. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
 						<p>.flexContainer {</p>
@@ -201,35 +209,31 @@
 					</div>
 				</div>
 				<div class="flexBlock" id="secondFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement" id="secondTask">3</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement" id="secondTask"><span>3</span></div>
 				</div>
-			</article>
-			<p id="result">Ваш результат: 0 из 2.</p>
-		</section>
-		<div class="links">
-			<a href="flexGrow.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Свойство flex-grow для Flex-элемента</h3>
-				</div>
-			</a>
-			<a href="flexBasis.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство flex-basis для Flex-элемента</h3>
-				</div>
-			</a>
-		</div>
+			</div>
+			<p id="result">Ваш результат: <b>0</b> из <b>2</b>.</p>
+		</article>
 	</main>
+	<div class="links" id="link">
+		<a href="flexGrow.html" class="absoluteTop back">
+			<span class="textLink">flex-grow</span>
+		</a>
+		<a href="flexBasis.html" class="absoluteTop next">
+			<span class="textLink">flex-basis</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/gameRange.js"></script>	
-	<script type="text/javascript" src="js/flexShrink.js"></script>	
+	<script src="js/loader.js"></script>
+	<script src="js/gameRange.js"></script>	
+	<script src="js/flexShrink.js"></script>
+	<script src="js/scrollButton.js"></script>	
 </body>
 </html>

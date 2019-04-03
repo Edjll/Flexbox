@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="flex-basis, auto, content, русский язык, начальный размер flex-элемента">
+	<meta name="description" content="Свойство flex-basis">
 	<title>Flex-basis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
@@ -14,177 +14,185 @@
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<div class="default flexContainer">
-			<h1>flex-basis</h1>
-			<p>Свойство устанавливает начальный основной размер flex-элемента до распределения свободного пространства <i>основной оси</i> в соответствии со значениями (%, em, rem, ...).</p>
-		</div>
-		<article class="default flexContainer">
-			<h3>flex-basis: auto;</h3>
-			<p>По умолчанию. Начальные размеры flex-элемента определяются заданным width и height, а также значением flex-grow.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: auto;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-				</div>
+		<article>
+			<div class="default">
+				<h1>flex-basis</h1>
+				<p>Свойство устанавливает начальный основной размер flex-элемента до распределения свободного пространства <b>основной оси</b> в соответствии со значениями (%, em, rem, ...).</p>
 			</div>
+			<section class="default">
+				<h2>flex-basis: auto;</h2>
+				<p>По умолчанию. Начальные размеры flex-элемента определяются заданным width и height, а также значением flex-grow.</p>
+				<div class="flex">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: auto;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>flex-basis: content;</h2>
+				<p>Размеры Flex-элемента будут зависеть от содержимого. Не работает в Google Chrome.</p>
+				<div class="flex basisContentSupport">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: auto;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement:nth-of-type(1) {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: content;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement flexFlexBasisContent">1 (Text Text Text)</div>
+						<div class="flexElement"><span>2</span> (Text Text Text)</div>
+						<div class="flexElement"><span>3</span> (Text Text Text)</div>
+						<div class="flexElement"><span>4</span> (Text Text Text)</div>
+						<div class="flexElement"><span>5</span> (Text Text Text)</div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>flex-basis: 0;</h2>
+				<p>Начальные размеры Flex-элементов будут минимально возможными.</p>
+				<div class="flex">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: auto;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement:nth-of-type(odd) {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: 0;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement flexFlexBasis0">1</div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement flexFlexBasis0">3</div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement flexFlexBasis0">5</div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement flexFlexBasis0">7</div>
+						<div class="flexElement"><span>8</span></div>
+						<div class="flexElement flexFlexBasis0">9</div>
+						<div class="flexElement"><span>10</span></div>
+					</div>
+				</div>
+			</section>
+			<section class="default">
+				<h2>flex-basis: значение;</h2>
+				<p>Начальные размеры Flex-элементов будут определяться относительно Flex-контейнера. Но при заданном размере меньшем размеру контента, размер будет зависеть от width и height.</p>
+				<div class="flex">
+					<div class="code">
+						<div class="containerCode">
+							<p>.flexContainer {</p>
+							<p>display: flex;</p>
+							<p>flex-flow: row nowrap</p>
+							<p>justify-content: center;</p>
+							<p>align-items: center;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: auto;</p>
+							<p>}</p>
+						</div>
+						<div class="elementCode">
+							<p>.flexElement:nth-of-type(odd) {</p>
+							<p>flex-grow: 0;</p>
+							<p>flex-shrink: 1;</p>
+							<p>flex-basis: 40%;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement flexFlexBasis2"><span>1 (Text Text Text Text Text Text)</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement flexFlexBasis2"><span>3 (Text Text Text)</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement flexFlexBasis2"><span>5 (Text)</span></div>
+					</div>
+				</div>
+			</section>
 		</article>
-		<article class="default flexContainer">
-			<h3>flex-basis: content;</h3>
-			<p>Размеры Flex-элемента будут зависеть от содержимого. Не работает в Google Chrome.</p>
-			<div class="flex basisContentSupport">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: auto;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement:nth-of-type(1) {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: content;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement flexFlexBasisContent">1 (Text Text Text)</div>
-					<div class="flexElement">2 (Text Text Text)</div>
-					<div class="flexElement">3 (Text Text Text)</div>
-					<div class="flexElement">4 (Text Text Text)</div>
-					<div class="flexElement">5 (Text Text Text)</div>
-				</div>
-			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>flex-basis: 0;</h3>
-			<p>Начальные размеры Flex-элементов будут минимально возможными.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: auto;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement:nth-of-type(odd) {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: 0;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement flexFlexBasis0">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement flexFlexBasis0">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement flexFlexBasis0">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement flexFlexBasis0">7</div>
-					<div class="flexElement">8</div>
-					<div class="flexElement flexFlexBasis0">9</div>
-					<div class="flexElement">10</div>
-				</div>
-			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>flex-basis: значение;</h3>
-			<p>Начальные размеры Flex-элементов будут определяться относительно Flex-контейнера. Но при заданном размере меньшем размеру контента, размер будет зависеть от width и height.</p>
-			<div class="flex">
-				<div class="code">
-					<div class="containerCode">
-						<p>.flexContainer {</p>
-						<p>display: flex;</p>
-						<p>flex-flow: row nowrap</p>
-						<p>justify-content: center;</p>
-						<p>align-items: center;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: auto;</p>
-						<p>}</p>
-					</div>
-					<div class="elementCode">
-						<p>.flexElement:nth-of-type(odd) {</p>
-						<p>flex-grow: 0;</p>
-						<p>flex-shrink: 1;</p>
-						<p>flex-basis: 40%;</p>
-						<p>}</p>
-					</div>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement flexFlexBasis2">1 (Text Text Text Text Text Text)</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement flexFlexBasis2">3 (Text Text Text)</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement flexFlexBasis2">5 (Text)</div>
-				</div>
-			</div>
-		</article>
-		<section class="default flexContainer">
+		<article class="default">
+			<h2>Давайте проверим, как вы усвоили это свойство?</h2>
 			<div class="test">
-				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>Нужно задать возможные начальные размеры flex-элементу с номером 2 равными <i>80% родителя</i>. Справитесь?</p>
+				<p>Нужно задать возможные начальные размеры flex-элементу с номером 2 равными <b>80% родителя</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
 						<p>.flexContainer {</p>
@@ -210,16 +218,16 @@
 					</div>
 				</div>
 				<div class="flexBlock" id="firstFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement flexFlexBasis1" id="firstTask">2</div>
-					<div class="flexElement">3</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement flexFlexBasis1" id="firstTask"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>Нужно задать <i>минимально возможные</i> начальные размеры flex-элементу с номером 1. Справитесь?</p>
+				<p>Нужно задать <b>минимально возможные</b> начальные размеры flex-элементу с номером 1. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
 						<p>.flexContainer {</p>
@@ -245,16 +253,16 @@
 					</div>
 				</div>
 				<div class="flexBlock" id="secondFlexContainer">
-					<div class="flexElement flexFlexBasis1" id="secondTask">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
+					<div class="flexElement flexFlexBasis1" id="secondTask"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Третье задание</p>
-				<p>Нужно задать возможные начальные размеры flex-элементу с номером 3 равными <i>40% родителя</i>. Справитесь?</p>
+				<p>Нужно задать возможные начальные размеры flex-элементу с номером 3 равными <b>40% родителя</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<div class="containerCode">
 						<p>.flexContainer {</p>
@@ -280,35 +288,31 @@
 					</div>
 				</div>
 				<div class="flexBlock" id="thirdFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement flexFlexBasis1" id="thirdTask">3</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement flexFlexBasis1" id="thirdTask"><span>3</span></div>
 				</div>
-			</article>
-			<p id="result">Ваш результат: 0 из 3.</p>
-		</section>
-		<div class="links">
-			<a href="flexShrink.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Свойство flex-shrink для Flex-элемента</h3>
-				</div>
-			</a>
-			<a href="flex.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство flex для Flex-элемента</h3>
-				</div>
-			</a>
-		</div>
+			</div>
+			<p id="result">Ваш результат: <b>0</b> из <b>3</b>.</p>
+		</article>
 	</main>
+	<div class="links" id="link">
+		<a href="flexShrink.html" class="absoluteTop back">
+			<span class="textLink">flex-shrink</span>
+		</a>
+		<a href="flex.html" class="absoluteTop next">
+			<span class="textLink">flex</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/gameRange.js"></script>	
-	<script type="text/javascript" src="js/flexBasis.js"></script>	
+	<script src="js/loader.js"></script>
+	<script src="js/gameRange.js"></script>	
+	<script src="js/flexBasis.js"></script>
+	<script src="js/scrollButton.js"></script>	
 </body>
 </html>

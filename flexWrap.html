@@ -4,109 +4,117 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="flex-wrap, русский язык, перенос flex-элементов">
+	<meta name="description" content="Свойство flex-wrap">
 	<title>Flex-wrap</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/flexGame.css">
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
+	<div class="preloader" id="preloader">
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+		<div class="animationPreloader"></div>
+	</div>
 	<header>
 		<nav>
 			<a href="index.html">Главная</a>
 			<a href="index.html"><div class="logo">
-				<img src="img/logo1.png">
+				<img src="img/logo1.png" alt="logo">
 				<span>Flexbox</span>
 			</div></a>
 			<a href="lessons.html">Уроки</a>
 		</nav>
 	</header>
-	<section class="slider">
-		<h1>Flexbox Layout</h1>
+	<div class="slogan">
+		<p>Flexbox Layout</p>
 		<p>Сайт создан в целях демонстрации модуля Flexbox Layout и обучения ему</p>
-	</section>
+	</div>
+	<button id="scrollButton" class="button"></button>
 	<main>
-		<div class="default flexContainer">
-			<h1>flex-wrap</h1>
-			<p>По умолчанию, все <i>flex-элементы</i> будут пытаться уместиться в одну строку. Свойство <i>flex-wrap</i> позволяет изменить это поведение и позволяет элементам размещаться в несколько строк при необходимости.</p>
-		</div>
-		<article class="default flexContainer">
-			<h3>flex-wrap: nowrap;</h3>
-			<p>Установлен по умолчанию. Flex-элементы будут пытаться разместиться в одну строку.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-direction: row;</p>
-					<p>flex-wrap: nowrap;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-				</div>
+		<article>
+			<div class="default">
+				<h1>flex-wrap</h1>
+				<p>По умолчанию, все <b>flex-элементы</b> будут пытаться уместиться в одну строку. Свойство <b>flex-wrap</b> позволяет изменить это поведение и позволяет элементам размещаться в несколько строк при необходимости.</p>
 			</div>
-		</article>
-		<article class="default flexContainer">
-			<h3>flex-wrap: wrap;</h3>
-			<p>Flex-элементы располагаются в несколько строк <i>сверху вниз</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-direction: row;</p>
-					<p>flex-wrap: wrap;</p>
-					<p>}</p>
+			<section class="default">
+				<h2>flex-wrap: nowrap;</h2>
+				<p>Установлен по умолчанию. Flex-элементы будут пытаться разместиться в одну строку.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-direction: row;</p>
+						<p>flex-wrap: nowrap;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+					</div>
 				</div>
-				<div class="flexBlock flexWrapWrap">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
+			</section>
+			<section class="default">
+				<h2>flex-wrap: wrap;</h2>
+				<p>Flex-элементы располагаются в несколько строк <b>сверху вниз</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-direction: row;</p>
+						<p>flex-wrap: wrap;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexWrapWrap">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+					</div>
 				</div>
-			</div>
+			</section>
+			<section class="default">
+				<h2>flex-wrap: wrap-reverse;</h2>
+				<p>Flex-элементы располагаются в несколько строк <b>снизу вверх</b>.</p>
+				<div class="flex">
+					<div class="code">
+						<p>.flexContainer {</p>
+						<p>display: flex;</p>
+						<p>flex-direction: row;</p>
+						<p>flex-wrap: wrap-reverse;</p>
+						<p>}</p>
+					</div>
+					<div class="flexBlock flexWrapWrapReverse">
+						<div class="flexElement"><span>1</span></div>
+						<div class="flexElement"><span>2</span></div>
+						<div class="flexElement"><span>3</span></div>
+						<div class="flexElement"><span>4</span></div>
+						<div class="flexElement"><span>5</span></div>
+						<div class="flexElement"><span>6</span></div>
+						<div class="flexElement"><span>7</span></div>
+						<div class="flexElement"><span>8</span></div>
+					</div>
+				</div>
+			</section>
 		</article>
 		<article class="default">
-			<h3>flex-wrap: wrap-reverse;</h3>
-			<p>Flex-элементы располагаются в несколько строк <i>снизу вверх</i>.</p>
-			<div class="flex">
-				<div class="code">
-					<p>.flexContainer {</p>
-					<p>display: flex;</p>
-					<p>flex-direction: row;</p>
-					<p>flex-wrap: wrap-reverse;</p>
-					<p>}</p>
-				</div>
-				<div class="flexBlock flexWrapWrapReverse">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
-				</div>
-			</div>
-		</article>
-		<section class="default flexContainer">
+			<h2>Давайте проверим, как вы усвоили это свойство?</h2>
 			<div class="test">
-				<h3>Давайте проверим, как вы усвоили это свойство?</h3>
 				<p>Первое задание</p>
-				<p>В этом задании нужно разместить все flex-элементы в <i>одну строку</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить все flex-элементы в <b>одну строку</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -115,21 +123,21 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexWrapWrap" id="firstFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Второе задание</p>
-				<p>В этом задании нужно расположить flex-элементы в <i>несколько строк сверху вниз</i>. Справитесь?</p>
+				<p>В этом задании нужно расположить flex-элементы в <b>несколько строк сверху вниз</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -138,21 +146,21 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock flexWrapWrapReverse" id="secondFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
 				</div>
-			</article>
+			</div>
 			<div class="test">
 				<p>Третье задание</p>
-				<p>В этом задании нужно разместить flex-элементы в <i>несколько строк снизу вверх</i>. Справитесь?</p>
+				<p>В этом задании нужно разместить flex-элементы в <b>несколько строк снизу вверх</b>. Справитесь?</p>
 			</div>
-			<article class="flex">
+			<div class="flex">
 				<div class="code">
 					<p>.FlexContainer {</p>
 					<p>display: flex;</p>
@@ -161,40 +169,36 @@
 					<p>}</p>
 				</div>
 				<div class="flexBlock" id="thirdFlexContainer">
-					<div class="flexElement">1</div>
-					<div class="flexElement">2</div>
-					<div class="flexElement">3</div>
-					<div class="flexElement">4</div>
-					<div class="flexElement">5</div>
-					<div class="flexElement">6</div>
-					<div class="flexElement">7</div>
-					<div class="flexElement">8</div>
+					<div class="flexElement"><span>1</span></div>
+					<div class="flexElement"><span>2</span></div>
+					<div class="flexElement"><span>3</span></div>
+					<div class="flexElement"><span>4</span></div>
+					<div class="flexElement"><span>5</span></div>
+					<div class="flexElement"><span>6</span></div>
+					<div class="flexElement"><span>7</span></div>
+					<div class="flexElement"><span>8</span></div>
 				</div>
-			</article>
-			<p id="result">Ваш результат: 0 из 3.</p>
-		</section>
-		<div class="links">
-			<a href="flexDirection.html">
-				<div class="def back">
-					<span>Назад</span>
-					<h3>Свойство flex-direction для Flex-контейнера</h3>
-				</div>
-			</a>
-			<a href="flexFlow.html">
-				<div class="def next">
-					<span>Далее</span>
-					<h3>Свойство flex-flow для Flex-контейнера</h3>
-				</div>
-			</a>
-		</div>
+			</div>
+			<p id="result">Ваш результат: <b>0</b> из <b>3</b>.</p>
+		</article>
 	</main>
+	<div class="links" id="link">
+		<a href="flexDirection.html" class="absoluteTop back">
+			<span class="textLink">flex-direction</span>
+		</a>
+		<a href="flexFlow.html" class="absoluteTop next">
+			<span class="textLink">flex-flow</span>
+		</a>		
+	</div>
 	<footer>
 		<div class="footerFlex">
-			<span>@2019 Flexbox</span>
-			<span>Дизайн от <i>Edjll</i></span>
+			<span>&#169; Flexbox, 2019</span>
+			<span>Создатель <a href="https://vk.com/edjll">Edjll</a></span>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/gameScript.js"></script>	
-	<script type="text/javascript" src="js/flexWrap.js"></script>	
+	<script src="js/loader.js"></script>
+	<script src="js/gameScript.js"></script>	
+	<script src="js/flexWrap.js"></script>
+	<script src="js/scrollButton.js"></script>	
 </body>
 </html>
