@@ -8,10 +8,24 @@
 	color: #fff;
 }
 
-.links a:nth-of-type(1) {
-	width: 40%;
+.links {
+	height: 120px;
 }
 
-.links a:nth-of-type(2) {
-	width: 60%;
+.links a {
+	width: 50%;
+	height: 100%;
+	background-size: auto 85px;
+}
+
+@media (min-width: 1680px) {
+	.next {
+		border-bottom-right-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	.back {
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
 }

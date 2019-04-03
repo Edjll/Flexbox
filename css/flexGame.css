@@ -11,13 +11,21 @@
 }
 
 .test p:nth-of-type(1) {
-	font-style: italic;
+	font-size: 24px;
+	margin: 0 0 10px 0;
 }
 
 .game {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 100%;
 	margin: 30px;	
 }
@@ -27,7 +35,8 @@
 	width: calc(100% - 380px);
 	border-left: 4px solid #22f;
 	min-height: 200px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .gameInput {
@@ -35,7 +44,8 @@
 	border: 1px solid #33f;
     background-color: #aaf;
     padding-left: 2px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     outline: none;
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -45,102 +55,174 @@
 }
 
 .flexDirectionRow {
-	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 .flexDirectionRowReverse {
-	flex-direction: row-reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
 }
 .flexDirectionColumn {
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .flexDirectionColumnReverse {
-	flex-direction: column-reverse;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: column-reverse;
+	        flex-direction: column-reverse;
 }
 
 .flexWrapNowrap {
-	flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
 }
 .flexWrapWrap {
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .flexWrapWrapReverse {
-	flex-wrap: wrap-reverse;
+	-ms-flex-wrap: wrap-reverse;
+	    flex-wrap: wrap-reverse;
 }
 
 
 .flexFlowColumnWrapReverse {
-	flex-flow: column wrap-reverse;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column wrap-reverse;
+	        flex-flow: column wrap-reverse;
 }
 .flexFlowColumnWrap {
-	flex-flow: column wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column wrap;
+	        flex-flow: column wrap;
 }
 .flexFlowColumnNowrap {
-	flex-flow: column nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
 }
 
 .flexFlowRowWrapReverse {
-	flex-flow: row wrap-reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap-reverse;
+	        flex-flow: row wrap-reverse;
 }
 .flexFlowRowWrap {
-	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
 }
 .flexFlowRowNowrap {
-	flex-flow: row nowrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
 }
 
 .flexFlowRowReverseNowrap {
-	flex-flow: row-reverse nowrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-flow: row-reverse nowrap;
+	        flex-flow: row-reverse nowrap;
 }
 .flexFlowRowReverseWrap {
-	flex-flow: row-reverse wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-flow: row-reverse wrap;
+	        flex-flow: row-reverse wrap;
 }
 .flexFlowRowReverseWrapReverse {
-	flex-flow: row-reverse wrap-reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-flow: row-reverse wrap-reverse;
+	        flex-flow: row-reverse wrap-reverse;
 }
 
 .flexFlowColumnReverseWrap {
-	flex-flow: column-reverse wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	    -ms-flex-flow: column-reverse wrap;
+	        flex-flow: column-reverse wrap;
 }
 .flexFlowColumnReverseWrapReverse {
-	flex-flow: column-reverse wrap-reverse;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	    -ms-flex-flow: column-reverse wrap-reverse;
+	        flex-flow: column-reverse wrap-reverse;
 }
 .flexFlowColumnReverseNowrap {
-	flex-flow: column-reverse nowrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	    -ms-flex-flow: column-reverse nowrap;
+	        flex-flow: column-reverse nowrap;
 }
 
 .flexJustifyContentFlexStart {
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 }
 .flexJustifyContentFlexEnd {
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 .flexJustifyContentCenter {
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .flexJustifyContentSpaceBetween {
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .flexJustifyContentSpaceAround {
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 .flexJustifyContentSpaceEvenly {
-	justify-content: space-evenly;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
 }
 
 .flexAlignItemsStretch {
-	align-items: stretch;
+	-webkit-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
 }
 .flexAlignItemsFlexStart {
-	align-items: flex-start;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 }
 .flexAlignItemsFlexEnd {
-	align-items: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 }
 .flexAlignItemsCenter {
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 .flexAlignItemsBaseline {
-	align-items: baseline;
+	-webkit-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
 }
 
 .flexAlignItemsStretch .flexElement {
@@ -148,25 +230,32 @@
 }
 
 .flexAlignContentFlexStart {
-	align-content: flex-start;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
 }
 .flexAlignContentFlexEnd {
-	align-content: flex-end;
+	-ms-flex-line-pack: end;
+	    align-content: flex-end;
 }
 .flexAlignContentCenter {
-	align-content: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 }
 .flexAlignContentSpaceAround {
-	align-content: space-around;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
 }
 .flexAlignContentSpaceBetween {
-	align-content: space-between;
+	-ms-flex-line-pack: justify;
+	    align-content: space-between;
 }
 .flexAlignContentStretch {
-	align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	    align-content: stretch;
 }
 .flexAlignContentSpaceEvenly {
-	align-content: space-evenly;
+	-ms-flex-line-pack: space-evenly;
+	    align-content: space-evenly;
 }
 
 .flexAlignContentStretch .flexElement {
@@ -174,102 +263,183 @@
 }
 
 .flexFlexGrow0 {
-	flex-grow: 0;
+	-webkit-box-flex: 0;
+	    -ms-flex-positive: 0;
+	        flex-grow: 0;
 }
 .flexFlexGrow1 {
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 .flexFlexGrow2 {
-	flex-grow: 2;
+	-webkit-box-flex: 2;
+	    -ms-flex-positive: 2;
+	        flex-grow: 2;
 }
 .flexFlexGrow3 {
-	flex-grow: 3;
+	-webkit-box-flex: 3;
+	    -ms-flex-positive: 3;
+	        flex-grow: 3;
 }
 .flexFlexGrow4 {
-	flex-grow: 4;
+	-webkit-box-flex: 4;
+	    -ms-flex-positive: 4;
+	        flex-grow: 4;
 }
 .flexFlexGrow5 {
-	flex-grow: 5;
+	-webkit-box-flex: 5;
+	    -ms-flex-positive: 5;
+	        flex-grow: 5;
 }
 
 
 .flexFlexShrink0 {
- 	flex-shrink: 0;
+ 	-ms-flex-negative: 0;
+ 	    flex-shrink: 0;
 }
 .flexFlexShrink1 {
-	flex-shrink: 1;
+	-ms-flex-negative: 1;
+	    flex-shrink: 1;
 }
 .flexFlexShrink2 {
-	flex-shrink: 2;
+	-ms-flex-negative: 2;
+	    flex-shrink: 2;
 }
 .flexFlexShrink3 {
-	flex-shrink: 3;
+	-ms-flex-negative: 3;
+	    flex-shrink: 3;
 }
 .flexFlexShrink4 {
-	flex-shrink: 4;
+	-ms-flex-negative: 4;
+	    flex-shrink: 4;
 }
 .flexFlexShrink5 {
-	flex-shrink: 5;
+	-ms-flex-negative: 5;
+	    flex-shrink: 5;
 }
 
 .flexOrder_5 {
-	order: -5;
+	-webkit-box-ordinal-group: -4;
+	    -ms-flex-order: -5;
+	        order: -5;
 }
 .flexOrder_4 {
-	order: -4;
+	-webkit-box-ordinal-group: -3;
+	    -ms-flex-order: -4;
+	        order: -4;
 }
 .flexOrder_3 {
-	order: -3;
+	-webkit-box-ordinal-group: -2;
+	    -ms-flex-order: -3;
+	        order: -3;
 }
 .flexOrder_2 {
-	order: -2;
+	-webkit-box-ordinal-group: -1;
+	    -ms-flex-order: -2;
+	        order: -2;
 }
 .flexOrder_1 {
-	order: -1;
+	-webkit-box-ordinal-group: 0;
+	    -ms-flex-order: -1;
+	        order: -1;
 }
 .flexOrder0 {
-	order: 0;
+	-webkit-box-ordinal-group: 1;
+	    -ms-flex-order: 0;
+	        order: 0;
 }
 .flexOrder1 {
-	order: 1;
+	-webkit-box-ordinal-group: 2;
+	    -ms-flex-order: 1;
+	        order: 1;
 }
 .flexOrder2 {
-	order: 2;
+	-webkit-box-ordinal-group: 3;
+	    -ms-flex-order: 2;
+	        order: 2;
 }
 .flexOrder3 {
-	order: 3;
+	-webkit-box-ordinal-group: 4;
+	    -ms-flex-order: 3;
+	        order: 3;
 }
 .flexOrder4 {
-	order: 4;
+	-webkit-box-ordinal-group: 5;
+	    -ms-flex-order: 4;
+	        order: 4;
 }
 .flexOrder5 {
-	order: 5;
+	-webkit-box-ordinal-group: 6;
+	    -ms-flex-order: 5;
+	        order: 5;
 }
 
 .flexFlexBasisAuto {
-	flex-basis: auto;
+	-ms-flex-preferred-size: auto;
+	    flex-basis: auto;
 }
 .flexFlexBasisContent {
-	flex-basis: content;
+	-ms-flex-preferred-size: content;
+	    flex-basis: content;
 }
 .flexFlexBasis0 {
-	flex-basis: 0;
+	-ms-flex-preferred-size: 0;
+	    flex-basis: 0;
 }
 .flexFlexBasis1 {
-	flex-basis: 20%;
+	-ms-flex-preferred-size: 20%;
+	    flex-basis: 20%;
 }
 .flexFlexBasis2 {
-	flex-basis: 40%;
+	-ms-flex-preferred-size: 40%;
+	    flex-basis: 40%;
 }
 .flexFlexBasis3 {
-	flex-basis: 60%;
+	-ms-flex-preferred-size: 60%;
+	    flex-basis: 60%;
 }
 .flexFlexBasis4 {
-	flex-basis: 80%;
+	-ms-flex-preferred-size: 80%;
+	    flex-basis: 80%;
 }
 .flexFlexBasis5 {
-	flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	    flex-basis: 100%;
 }
+
+
+
+
+.flexAlignSelfStretch {
+	-ms-flex-item-align: stretch;
+	    -ms-grid-row-align: stretch;
+	    align-self: stretch;
+	height: auto;
+}
+.flexAlignSelfFlexStart {
+	-ms-flex-item-align: start;
+	    align-self: flex-start;
+}
+.flexAlignSelfFlexEnd {
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
+}
+.flexAlignSelfCenter {
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
+}
+.flexAlignSelfBaseline {
+	-ms-flex-item-align: baseline;
+	    align-self: baseline;
+}
+
+
+
+
+
+
 
 
 .trueAnswer {
@@ -278,6 +448,16 @@
 .falseAnswer {
 	background-color: red;
 }
+
+
+
+
+
+
+
+
+
+
 
 input[type=range] {
   -webkit-appearance: none;

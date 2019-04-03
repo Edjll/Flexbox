@@ -3,12 +3,13 @@
 	margin: 0 auto;
 	max-width: 100%;
 	height: auto;
+	cursor: -webkit-zoom-in;
+	cursor: zoom-in;
 }
 
 .terms {
-	list-style-type: circle;
-	margin: 20px 0;
-	padding-inline-start: 20px;
+	margin: 20px 0 20px 10px;
+	list-style-type: none;
 }
 
 .terms li:not(:last-of-type) {
@@ -19,39 +20,112 @@
 	font-size: 22px;
 }
 
-.nextA {
-	display: block;
-	max-width: 1230px;
-	width: 100%;
-	height: 120px;
-	padding: 0 30px;
-	margin: 0 auto;
-	text-decoration: none;
-	outline: none;
-	box-sizing: border-box;
-	color: #000;
+.terms li::before {
+	content: "";
+    display: inline-block;
+    background-image: url(../img/listItem2.png);
+    background-size: cover;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    position: relative;
+    top: 4px;
+    left: -10px;
 }
 
-.nextA:hover {
-	background-color: #99f;
-	color: #fff;
-	transition-duration: 0.4s;
+@media (max-width: 1679px) {
+	.links a {
+		width: 100%;
+		border-radius: 10px;
+		-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+	}
 }
 
-.next {
+.imgFull {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 210px;
-	height: 100%;
-	margin: 0 auto;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.98);
+	z-index: 1;
+	-webkit-animation: imgFullOpen 0.4s;
+	        animation: imgFullOpen 0.4s;
 }
 
-.next span {
-	font-size: 20px;
+.imgButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 5%;
+	height: 5%;
+	border: none;
+	background-image: url(../img/imgClose.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	     -o-transition-duration: 0.4s;
+	        transition-duration: 0.4s;
 }
 
-.next h3 {
-	font-size: 22px;
-	margin: 0;
+.imgButton:hover {
+	opacity: 0.5;
+}
+
+.cloneImg {
+	cursor: auto;
+	width: 100%;
+}
+
+.imgFullClose {
+	-webkit-animation: imgFullClose 0.4s;
+	        animation: imgFullClose 0.4s;
+}
+
+@-webkit-keyframes imgFullOpen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes imgFullOpen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes imgFullClose {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes imgFullClose {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }

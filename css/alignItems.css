@@ -1,32 +1,31 @@
-
-.baseline div:nth-of-type(1) {
+.baseline .flexElement:nth-of-type(1) span {
 	font-size: 14px;
 }
-.baseline div:nth-of-type(2) {
+.baseline .flexElement:nth-of-type(2) span {
 	font-size: 22px;
 }
-.baseline div:nth-of-type(3) {
+.baseline .flexElement:nth-of-type(3) span {
 	font-size: 30px;
 }
-.baseline div:nth-of-type(4) {
+.baseline .flexElement:nth-of-type(4) span {
 	font-size: 38px;
 }
-.baseline div:nth-of-type(5) {
+.baseline .flexElement:nth-of-type(5) span {
 	font-size: 46px;
 }
 
-#fourthFlexContainer div:nth-of-type(1) {
+#fourthFlexContainer .flexElement:nth-of-type(1) span {
 	font-size: 14px;
 }
-#fourthFlexContainer div:nth-of-type(2) {
+#fourthFlexContainer .flexElement:nth-of-type(2) span {
 	font-size: 22px;
 }
-#fourthFlexContainer div:nth-of-type(3) {
+#fourthFlexContainer .flexElement:nth-of-type(3) span {
 	font-size: 30px;
 }
-#fourthFlexContainer div:nth-of-type(4) {
+#fourthFlexContainer .flexElement:nth-of-type(4) span {
 	font-size: 38px;	
 }
-#fourthFlexContainer div:nth-of-type(5) {
+#fourthFlexContainer .flexElement:nth-of-type(5) span {
 	font-size: 46px;
 }
