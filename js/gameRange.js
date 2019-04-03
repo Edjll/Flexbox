@@ -66,6 +66,6 @@ function gameRange(id, idContainer, idBlock, type, name, number, amountQuestion,
 			var x = (inputElement.value*20 !== 0)?'%':'';
 			idTask.innerHTML = inputElement.value*20 + x;
 		} else idTask.innerHTML = inputElement.value;
-		result.innerHTML = 'Ваш результат: ' + amountTrueAnswer + ' из ' + amountQuestion +'.';
+		result.innerHTML = 'Ваш результат: <b>' + amountTrueAnswer + '</b> из <b>' + amountQuestion +'</b>.';
 	} 
 }

@@ -48,8 +48,9 @@ function newName(name) {
 function game(id, type, idBlock, name, number, amountQuestion, names, defaulFlexGame) {
 	id.oninput = function() {
 		var inputElement = document.getElementById(this.id);
+		inputElement.value = inputElement.value.toLowerCase();
 		var classElement = document.getElementById(idBlock);
-		var elementsColor = classElement.getElementsByTagName('*');
+		var elementsColor = classElement.getElementsByTagName('div');
 		var att;
 		question[number] = 0;
 		inputElement.className = defaulInputClass;
@@ -68,6 +69,6 @@ function game(id, type, idBlock, name, number, amountQuestion, names, defaulFlex
 			question[number] = 1;
 		}
 		sumAnswer(amountQuestion);
-		document.getElementById('result').innerHTML = 'Ваш результат: ' + amountTrueAnswer + ' из ' + amountQuestion +'.';
+		document.getElementById('result').innerHTML = 'Ваш результат: <b>' + amountTrueAnswer + '</b> из <b>' + amountQuestion +'</b>.';
 	} 
 }

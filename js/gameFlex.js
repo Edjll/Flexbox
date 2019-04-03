@@ -31,7 +31,7 @@ function arr(amountQuestion) {
 	}
 }
 
-function gameRange(idContainer, idBlock, number, amountQuestion, inputs, trueAnswer1, trueAnswer2, trueAnswer3) {
+function gameFlex(idContainer, idBlock, number, amountQuestion, inputs, trueAnswer1, trueAnswer2, trueAnswer3) {
 	inputs.oninput = function() {
 		var trueAnswer = [trueAnswer1, trueAnswer2, trueAnswer3];
 		var inputElement = this.getElementsByClassName('gameInput');
@@ -77,6 +77,12 @@ function gameRange(idContainer, idBlock, number, amountQuestion, inputs, trueAns
 				answer[i].innerHTML = inputElement[i].value*20 + x;
 			} else answer[i].innerHTML = inputElement[i].value;
 		}
-		result.innerHTML = 'Ваш результат: ' + amountTrueAnswer + ' из ' + amountQuestion +'.';
+		result.innerHTML = 'Ваш результат: <b>' + amountTrueAnswer + '</b> из <b>' + amountQuestion +'</b>.';
 	} 
 }
+
+
+arr(2);
+
+gameFlex(firstFlexContainer, 'firstTask', 0, 2, inputs1, '1', '0', '2');
+gameFlex(secondFlexContainer, 'secondTask', 1, 2, inputs2, '0', '3', '0');
